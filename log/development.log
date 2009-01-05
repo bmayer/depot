@@ -1,0 +1,2046 @@
+WARNING: You're using the Ruby-based MySQL library that ships with Rails. This library is not suited for production. Please install the C-based MySQL library instead (gem install mysql).
+  [4;36;1mSQL (0.000248)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (0.004051)[0m   [0mCREATE TABLE `schema_info` (version int(11))[0m
+  [4;36;1mSQL (0.000448)[0m   [0;1mINSERT INTO `schema_info` (version) VALUES(0)[0m
+  [4;35;1mSQL (0.000000)[0m   [0mMysql::Error: #42S01Table 'schema_info' already exists: CREATE TABLE `schema_info` (version int(11))[0m
+  [4;36;1mSQL (0.000429)[0m   [0;1mSELECT * FROM schema_info[0m
+  [4;35;1mSQL (0.000465)[0m   [0mSHOW TABLES[0m
+WARNING: You're using the Ruby-based MySQL library that ships with Rails. This library is not suited for production. Please install the C-based MySQL library instead (gem install mysql).
+  [4;36;1mSQL (0.000237)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (0.000382)[0m   [0mCREATE DATABASE `depot_development` DEFAULT CHARACTER SET `utf8` COLLATE `utf8_general_ci`[0m
+WARNING: You're using the Ruby-based MySQL library that ships with Rails. This library is not suited for production. Please install the C-based MySQL library instead (gem install mysql).
+  [4;36;1mSQL (0.000243)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (0.005100)[0m   [0mCREATE TABLE `schema_info` (version int(11))[0m
+  [4;36;1mSQL (0.000569)[0m   [0;1mINSERT INTO `schema_info` (version) VALUES(0)[0m
+  [4;35;1mSQL (0.000000)[0m   [0mMysql::Error: #42S01Table 'schema_info' already exists: CREATE TABLE `schema_info` (version int(11))[0m
+  [4;36;1mSQL (0.000437)[0m   [0;1mSELECT * FROM schema_info[0m
+  [4;35;1mSQL (0.000455)[0m   [0mSHOW TABLES[0m
+WARNING: You're using the Ruby-based MySQL library that ships with Rails. This library is not suited for production. Please install the C-based MySQL library instead (gem install mysql).
+  [4;36;1mSQL (0.000293)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (0.000000)[0m   [0mMysql::Error: #42S01Table 'schema_info' already exists: CREATE TABLE `schema_info` (version int(11))[0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mMysql::Error: #42S01Table 'schema_info' already exists: CREATE TABLE `schema_info` (version int(11))[0m
+  [4;35;1mSQL (0.000827)[0m   [0mSELECT version FROM schema_info[0m
+Migrating to CreateProducts (1)
+  [4;36;1mSQL (0.017006)[0m   [0;1mCREATE TABLE `products` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `title` varchar(255) DEFAULT NULL, `description` text DEFAULT NULL, `image_url` varchar(255) DEFAULT NULL, `created_at` datetime DEFAULT NULL, `updated_at` datetime DEFAULT NULL) ENGINE=InnoDB[0m
+  [4;35;1mSQL (0.000634)[0m   [0mUPDATE schema_info SET version = 1[0m
+  [4;36;1mSQL (0.000641)[0m   [0;1mSELECT * FROM schema_info[0m
+  [4;35;1mSQL (0.000752)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.002899)[0m   [0;1mSHOW FIELDS FROM `products`[0m
+  [4;35;1mSQL (0.004758)[0m   [0mdescribe `products`[0m
+  [4;36;1mSQL (0.001738)[0m   [0;1mSHOW KEYS FROM `products`[0m
+
+
+Processing ProductsController#index (for 127.0.0.1 at 2008-12-04 22:32:25) [GET]
+  Session ID: BAh7BzoMY3NyZl9pZCIlN2U3MmY4MjlmNDc0NjljMDZmYTMxZDJhYTkxNmEw%0AMTkiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh%0Ac2h7AAY6CkB1c2VkewA%3D--5adc54106883d985a1a5493f74568e3f69655eab
+  Parameters: {"action"=>"index", "controller"=>"products"}
+
+
+CGI::Session::CookieStore::TamperedWithCookie (CGI::Session::CookieStore::TamperedWithCookie):
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/session/cookie_store.rb:143:in `unmarshal'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/session/cookie_store.rb:102:in `restore'
+    /usr/lib/ruby/1.8/cgi/session.rb:304:in `[]'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/cgi_process.rb:134:in `session'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/cgi_process.rb:166:in `stale_session_check!'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/cgi_process.rb:114:in `session'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/base.rb:1131:in `assign_shortcuts_without_flash'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/flash.rb:167:in `assign_shortcuts'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/base.rb:518:in `process_without_filters'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/filters.rb:685:in `process_without_session_management_support'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/session_management.rb:123:in `process'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/base.rb:388:in `process'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/dispatcher.rb:171:in `handle_request'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/dispatcher.rb:115:in `dispatch'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/dispatcher.rb:126:in `dispatch_cgi'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/dispatcher.rb:9:in `dispatch'
+    /usr/lib/ruby/gems/1.8/gems/rails-2.0.2/lib/webrick_server.rb:112:in `handle_dispatch'
+    /usr/lib/ruby/gems/1.8/gems/rails-2.0.2/lib/webrick_server.rb:78:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+    /usr/lib/ruby/gems/1.8/gems/rails-2.0.2/lib/webrick_server.rb:62:in `dispatch'
+    /usr/lib/ruby/gems/1.8/gems/rails-2.0.2/lib/commands/servers/webrick.rb:66
+    /usr/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:27:in `gem_original_require'
+    /usr/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:27:in `require'
+    /usr/lib/ruby/gems/1.8/gems/activesupport-2.0.2/lib/active_support/dependencies.rb:496:in `require'
+    /usr/lib/ruby/gems/1.8/gems/activesupport-2.0.2/lib/active_support/dependencies.rb:342:in `new_constants_in'
+    /usr/lib/ruby/gems/1.8/gems/activesupport-2.0.2/lib/active_support/dependencies.rb:496:in `require'
+    /usr/lib/ruby/gems/1.8/gems/rails-2.0.2/lib/commands/server.rb:39
+    /usr/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:27:in `gem_original_require'
+    /usr/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:27:in `require'
+    script/server:3
+
+Rendering /usr/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/templates/rescues/layout.erb (internal_server_error)
+
+
+Processing ProductsController#index (for 127.0.0.1 at 2008-12-04 22:32:28) [GET]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo%0ASGFzaHsABjoKQHVzZWR7AA%3D%3D--ea808cb7c48150d60a2b1b8f69a42f9529dec9fa
+  Parameters: {"action"=>"index", "controller"=>"products"}
+WARNING: You're using the Ruby-based MySQL library that ships with Rails. This library is not suited for production. Please install the C-based MySQL library instead (gem install mysql).
+  [4;36;1mSQL (0.019941)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mProduct Load (0.003295)[0m   [0mSELECT * FROM `products` [0m
+Rendering template within layouts/products
+Rendering products/index
+Completed in 0.03473 (28 reqs/sec) | Rendering: 0.01163 (33%) | DB: 0.02324 (66%) | 200 OK [http://homerj/products]
+
+
+Processing ProductsController#new (for 127.0.0.1 at 2008-12-04 22:32:31) [GET]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo%0ASGFzaHsABjoKQHVzZWR7AA%3D%3D--ea808cb7c48150d60a2b1b8f69a42f9529dec9fa
+  Parameters: {"action"=>"new", "controller"=>"products"}
+  [4;36;1mProduct Columns (0.003825)[0m   [0;1mSHOW FIELDS FROM `products`[0m
+Rendering template within layouts/products
+Rendering products/new
+Completed in 0.06063 (16 reqs/sec) | Rendering: 0.01543 (25%) | DB: 0.00382 (6%) | 200 OK [http://homerj/products/new]
+
+
+Processing ProductsController#create (for 127.0.0.1 at 2008-12-04 22:33:36) [POST]
+  Session ID: BAh7BzoMY3NyZl9pZCIlMGFiYmZmZTZjZDg0MzFlYWJjMzY2MTk4MGE2ZTI4%0AMDkiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh%0Ac2h7AAY6CkB1c2VkewA%3D--17287179f12915c82191ef3b1b066e950b149fd5
+  Parameters: {"commit"=>"Create", "product"=>{"image_url"=>"", "title"=>"Fiat 131", "description"=>"Fiat 131 Abarth"}, "authenticity_token"=>"50bc61c040366f8308d9f6e7f5b8537c2421cb12", "action"=>"create", "controller"=>"products"}
+  [4;35;1mProduct Columns (0.007866)[0m   [0mSHOW FIELDS FROM `products`[0m
+  [4;36;1mSQL (0.002566)[0m   [0;1mBEGIN[0m
+  [4;35;1mProduct Create (0.001327)[0m   [0mINSERT INTO `products` (`image_url`, `updated_at`, `title`, `description`, `created_at`) VALUES('', '2008-12-04 22:33:36', 'Fiat 131', 'Fiat 131 Abarth', '2008-12-04 22:33:36')[0m
+  [4;36;1mSQL (0.015523)[0m   [0;1mCOMMIT[0m
+Redirected to http://homerj:3001/products/1
+Completed in 0.06035 (16 reqs/sec) | DB: 0.02728 (45%) | 302 Found [http://homerj/products]
+
+
+Processing ProductsController#show (for 127.0.0.1 at 2008-12-04 22:33:36) [GET]
+  Session ID: BAh7BzoMY3NyZl9pZCIlMGFiYmZmZTZjZDg0MzFlYWJjMzY2MTk4MGE2ZTI4%0AMDkiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh%0Ac2h7BjoLbm90aWNlIiZQcm9kdWN0IHdhcyBzdWNjZXNzZnVsbHkgY3JlYXRl%0AZC4GOgpAdXNlZHsGOwdU--a38172a41a4eac403a8e14c363294bb3232caf62
+  Parameters: {"action"=>"show", "id"=>"1", "controller"=>"products"}
+  [4;35;1mProduct Columns (0.005319)[0m   [0mSHOW FIELDS FROM `products`[0m
+  [4;36;1mProduct Load (0.002430)[0m   [0;1mSELECT * FROM `products` WHERE (`products`.`id` = 1) [0m
+Rendering template within layouts/products
+Rendering products/show
+Completed in 0.04372 (22 reqs/sec) | Rendering: 0.01008 (23%) | DB: 0.00775 (17%) | 200 OK [http://homerj/products/1]
+
+
+Processing ProductsController#index (for 127.0.0.1 at 2008-12-04 22:33:39) [GET]
+  Session ID: BAh7BzoMY3NyZl9pZCIlMGFiYmZmZTZjZDg0MzFlYWJjMzY2MTk4MGE2ZTI4%0AMDkiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh%0Ac2h7AAY6CkB1c2VkewA%3D--17287179f12915c82191ef3b1b066e950b149fd5
+  Parameters: {"action"=>"index", "controller"=>"products"}
+  [4;35;1mProduct Load (0.003000)[0m   [0mSELECT * FROM `products` [0m
+Rendering template within layouts/products
+Rendering products/index
+  [4;36;1mProduct Columns (0.007201)[0m   [0;1mSHOW FIELDS FROM `products`[0m
+Completed in 0.03557 (28 reqs/sec) | Rendering: 0.00787 (22%) | DB: 0.01020 (28%) | 200 OK [http://homerj/products]
+
+
+Processing ProductsController#show (for 127.0.0.1 at 2008-12-04 22:33:43) [GET]
+  Session ID: BAh7BzoMY3NyZl9pZCIlMGFiYmZmZTZjZDg0MzFlYWJjMzY2MTk4MGE2ZTI4%0AMDkiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh%0Ac2h7AAY6CkB1c2VkewA%3D--17287179f12915c82191ef3b1b066e950b149fd5
+  Parameters: {"action"=>"show", "id"=>"1", "controller"=>"products"}
+  [4;35;1mProduct Columns (0.004938)[0m   [0mSHOW FIELDS FROM `products`[0m
+  [4;36;1mProduct Load (0.002190)[0m   [0;1mSELECT * FROM `products` WHERE (`products`.`id` = 1) [0m
+Rendering template within layouts/products
+Rendering products/show
+Completed in 0.05419 (18 reqs/sec) | Rendering: 0.00616 (11%) | DB: 0.00713 (13%) | 200 OK [http://homerj/products/1]
+
+
+Processing ProductsController#index (for 127.0.0.1 at 2008-12-04 22:33:46) [GET]
+  Session ID: BAh7BzoMY3NyZl9pZCIlMGFiYmZmZTZjZDg0MzFlYWJjMzY2MTk4MGE2ZTI4%0AMDkiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh%0Ac2h7AAY6CkB1c2VkewA%3D--17287179f12915c82191ef3b1b066e950b149fd5
+  Parameters: {"action"=>"index", "controller"=>"products"}
+  [4;35;1mProduct Load (0.012896)[0m   [0mSELECT * FROM `products` [0m
+Rendering template within layouts/products
+Rendering products/index
+  [4;36;1mProduct Columns (0.022969)[0m   [0;1mSHOW FIELDS FROM `products`[0m
+Completed in 0.05935 (16 reqs/sec) | Rendering: 0.00719 (12%) | DB: 0.03587 (60%) | 200 OK [http://homerj/products]
+WARNING: You're using the Ruby-based MySQL library that ships with Rails. This library is not suited for production. Please install the C-based MySQL library instead (gem install mysql).
+  [4;36;1mSQL (0.000291)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (0.000000)[0m   [0mMysql::Error: #42S01Table 'schema_info' already exists: CREATE TABLE `schema_info` (version int(11))[0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mMysql::Error: #42S01Table 'schema_info' already exists: CREATE TABLE `schema_info` (version int(11))[0m
+WARNING: You're using the Ruby-based MySQL library that ships with Rails. This library is not suited for production. Please install the C-based MySQL library instead (gem install mysql).
+  [4;36;1mSQL (0.000244)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (0.000000)[0m   [0mMysql::Error: #42S01Table 'schema_info' already exists: CREATE TABLE `schema_info` (version int(11))[0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mMysql::Error: #42S01Table 'schema_info' already exists: CREATE TABLE `schema_info` (version int(11))[0m
+  [4;35;1mSQL (0.013089)[0m   [0mSELECT version FROM schema_info[0m
+  [4;36;1mSQL (0.000400)[0m   [0;1mSELECT version FROM schema_info[0m
+Migrating to AddPriceToProduct (2)
+  [4;35;1mSQL (0.000000)[0m   [0mMysql::Error: #42000You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'decimali DEFAULT 0' at line 1: ALTER TABLE `products` ADD `price` decimali DEFAULT 0[0m
+WARNING: You're using the Ruby-based MySQL library that ships with Rails. This library is not suited for production. Please install the C-based MySQL library instead (gem install mysql).
+  [4;36;1mSQL (0.000248)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (0.000000)[0m   [0mMysql::Error: #42S01Table 'schema_info' already exists: CREATE TABLE `schema_info` (version int(11))[0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mMysql::Error: #42S01Table 'schema_info' already exists: CREATE TABLE `schema_info` (version int(11))[0m
+  [4;35;1mSQL (0.000484)[0m   [0mSELECT version FROM schema_info[0m
+  [4;36;1mSQL (0.000382)[0m   [0;1mSELECT version FROM schema_info[0m
+Migrating to AddPriceToProduct (2)
+  [4;35;1mSQL (0.261381)[0m   [0mALTER TABLE `products` ADD `price` decimal(8,2) DEFAULT 0[0m
+  [4;36;1mSQL (0.014695)[0m   [0;1mUPDATE schema_info SET version = 2[0m
+  [4;35;1mSQL (0.000470)[0m   [0mSELECT * FROM schema_info[0m
+  [4;36;1mSQL (0.000515)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.001828)[0m   [0mSHOW FIELDS FROM `products`[0m
+  [4;36;1mSQL (0.001690)[0m   [0;1mdescribe `products`[0m
+  [4;35;1mSQL (0.001316)[0m   [0mSHOW KEYS FROM `products`[0m
+
+
+Processing ProductsController#index (for 127.0.0.1 at 2008-12-05 14:18:05) [GET]
+  Session ID: BAh7BzoMY3NyZl9pZCIlMGFiYmZmZTZjZDg0MzFlYWJjMzY2MTk4MGE2ZTI4%0AMDkiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh%0Ac2h7AAY6CkB1c2VkewA%3D--17287179f12915c82191ef3b1b066e950b149fd5
+  Parameters: {"action"=>"index", "controller"=>"products"}
+WARNING: You're using the Ruby-based MySQL library that ships with Rails. This library is not suited for production. Please install the C-based MySQL library instead (gem install mysql).
+  [4;36;1mSQL (0.000735)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mProduct Load (0.002501)[0m   [0mSELECT * FROM `products` [0m
+Rendering template within layouts/products
+Rendering products/index
+  [4;36;1mProduct Columns (0.009220)[0m   [0;1mSHOW FIELDS FROM `products`[0m
+Completed in 0.07653 (13 reqs/sec) | Rendering: 0.01691 (22%) | DB: 0.01246 (16%) | 200 OK [http://homerj/products]
+
+
+Processing ProductsController#edit (for 127.0.0.1 at 2008-12-05 14:18:10) [GET]
+  Session ID: BAh7BzoMY3NyZl9pZCIlMGFiYmZmZTZjZDg0MzFlYWJjMzY2MTk4MGE2ZTI4%0AMDkiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh%0Ac2h7AAY6CkB1c2VkewA%3D--17287179f12915c82191ef3b1b066e950b149fd5
+  Parameters: {"action"=>"edit", "id"=>"1", "controller"=>"products"}
+  [4;35;1mProduct Columns (0.006673)[0m   [0mSHOW FIELDS FROM `products`[0m
+  [4;36;1mProduct Load (0.002047)[0m   [0;1mSELECT * FROM `products` WHERE (`products`.`id` = 1) [0m
+Rendering template within layouts/products
+Rendering products/edit
+Completed in 0.03925 (25 reqs/sec) | Rendering: 0.01171 (29%) | DB: 0.00872 (22%) | 200 OK [http://homerj/products/1/edit]
+
+
+Processing ProductsController#index (for 127.0.0.1 at 2008-12-05 14:18:14) [GET]
+  Session ID: BAh7BzoMY3NyZl9pZCIlMGFiYmZmZTZjZDg0MzFlYWJjMzY2MTk4MGE2ZTI4%0AMDkiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh%0Ac2h7AAY6CkB1c2VkewA%3D--17287179f12915c82191ef3b1b066e950b149fd5
+  Parameters: {"action"=>"index", "controller"=>"products"}
+  [4;35;1mProduct Load (0.002234)[0m   [0mSELECT * FROM `products` [0m
+Rendering template within layouts/products
+Rendering products/index
+  [4;36;1mProduct Columns (0.007808)[0m   [0;1mSHOW FIELDS FROM `products`[0m
+Completed in 0.03982 (25 reqs/sec) | Rendering: 0.00804 (20%) | DB: 0.01004 (25%) | 200 OK [http://homerj/products]
+
+
+Processing ProductsController#new (for 127.0.0.1 at 2008-12-05 14:18:16) [GET]
+  Session ID: BAh7BzoMY3NyZl9pZCIlMGFiYmZmZTZjZDg0MzFlYWJjMzY2MTk4MGE2ZTI4%0AMDkiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh%0Ac2h7AAY6CkB1c2VkewA%3D--17287179f12915c82191ef3b1b066e950b149fd5
+  Parameters: {"action"=>"new", "controller"=>"products"}
+  [4;35;1mProduct Columns (0.007545)[0m   [0mSHOW FIELDS FROM `products`[0m
+Rendering template within layouts/products
+Rendering products/new
+Completed in 0.04303 (23 reqs/sec) | Rendering: 0.01291 (29%) | DB: 0.00754 (17%) | 200 OK [http://homerj/products/new]
+
+
+Processing ProductsController#index (for 127.0.0.1 at 2008-12-05 14:18:21) [GET]
+  Session ID: BAh7BzoMY3NyZl9pZCIlMGFiYmZmZTZjZDg0MzFlYWJjMzY2MTk4MGE2ZTI4%0AMDkiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh%0Ac2h7AAY6CkB1c2VkewA%3D--17287179f12915c82191ef3b1b066e950b149fd5
+  Parameters: {"action"=>"index", "controller"=>"products"}
+  [4;36;1mProduct Load (0.002734)[0m   [0;1mSELECT * FROM `products` [0m
+Rendering template within layouts/products
+Rendering products/index
+  [4;35;1mProduct Columns (0.004466)[0m   [0mSHOW FIELDS FROM `products`[0m
+Completed in 0.19155 (5 reqs/sec) | Rendering: 0.01251 (6%) | DB: 0.00720 (3%) | 200 OK [http://homerj/products]
+
+
+Processing ProductsController#index (for 127.0.0.1 at 2008-12-05 14:35:27) [GET]
+  Session ID: BAh7BzoMY3NyZl9pZCIlMGFiYmZmZTZjZDg0MzFlYWJjMzY2MTk4MGE2ZTI4%0AMDkiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh%0Ac2h7AAY6CkB1c2VkewA%3D--17287179f12915c82191ef3b1b066e950b149fd5
+  Parameters: {"action"=>"index", "controller"=>"products"}
+  [4;36;1mProduct Load (0.004498)[0m   [0;1mSELECT * FROM `products` [0m
+Rendering template within layouts/products
+Rendering products/index
+  [4;35;1mProduct Columns (0.008694)[0m   [0mSHOW FIELDS FROM `products`[0m
+Completed in 0.04266 (23 reqs/sec) | Rendering: 0.00839 (19%) | DB: 0.01319 (30%) | 200 OK [http://homerj/products]
+
+
+Processing ProductsController#show (for 127.0.0.1 at 2008-12-05 14:35:30) [GET]
+  Session ID: BAh7BzoMY3NyZl9pZCIlMGFiYmZmZTZjZDg0MzFlYWJjMzY2MTk4MGE2ZTI4%0AMDkiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh%0Ac2h7AAY6CkB1c2VkewA%3D--17287179f12915c82191ef3b1b066e950b149fd5
+  Parameters: {"action"=>"show", "id"=>"1", "controller"=>"products"}
+  [4;36;1mProduct Columns (0.012765)[0m   [0;1mSHOW FIELDS FROM `products`[0m
+  [4;35;1mProduct Load (0.001939)[0m   [0mSELECT * FROM `products` WHERE (`products`.`id` = 1) [0m
+Rendering template within layouts/products
+Rendering products/show
+
+
+ActionView::TemplateError (undefined local variable or method `f' for #<ActionView::Base:0xb79a29e8>) on line #17 of products/show.html.erb:
+14: </p>
+15: 
+16: <p>
+17:   <%= f.label :price %>
+18:   <%=h @product.price %>
+19: </p>
+20: 
+
+    app/views/products/show.html.erb:17:in `_run_erb_47app47views47products47show46html46erb'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_view/base.rb:637:in `send'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_view/base.rb:637:in `compile_and_render_template'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_view/base.rb:365:in `render_template'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_view/base.rb:316:in `render_file'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/base.rb:1100:in `render_for_file'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/base.rb:858:in `render_with_no_layout'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/base.rb:872:in `render_with_no_layout'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/layout.rb:262:in `render_without_benchmark'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/benchmarking.rb:51:in `render'
+    /usr/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/benchmarking.rb:51:in `render'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/mime_responds.rb:131:in `send'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/mime_responds.rb:131:in `custom'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/mime_responds.rb:156:in `call'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/mime_responds.rb:156:in `respond'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/mime_responds.rb:150:in `each'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/mime_responds.rb:150:in `respond'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/mime_responds.rb:107:in `respond_to'
+    app/controllers/products_controller.rb:18:in `show'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/base.rb:1158:in `send'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/base.rb:1158:in `perform_action_without_filters'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/filters.rb:697:in `call_filters'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/filters.rb:689:in `perform_action_without_benchmark'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    /usr/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/rescue.rb:199:in `perform_action_without_caching'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/caching.rb:678:in `perform_action'
+    /usr/lib/ruby/gems/1.8/gems/activerecord-2.0.2/lib/active_record/connection_adapters/abstract/query_cache.rb:33:in `cache'
+    /usr/lib/ruby/gems/1.8/gems/activerecord-2.0.2/lib/active_record/query_cache.rb:8:in `cache'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/caching.rb:677:in `perform_action'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/base.rb:524:in `send'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/base.rb:524:in `process_without_filters'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/filters.rb:685:in `process_without_session_management_support'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/session_management.rb:123:in `process'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/base.rb:388:in `process'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/dispatcher.rb:171:in `handle_request'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/dispatcher.rb:115:in `dispatch'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/dispatcher.rb:126:in `dispatch_cgi'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/dispatcher.rb:9:in `dispatch'
+    /usr/lib/ruby/gems/1.8/gems/rails-2.0.2/lib/webrick_server.rb:112:in `handle_dispatch'
+    /usr/lib/ruby/gems/1.8/gems/rails-2.0.2/lib/webrick_server.rb:78:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+    /usr/lib/ruby/gems/1.8/gems/rails-2.0.2/lib/webrick_server.rb:62:in `dispatch'
+    /usr/lib/ruby/gems/1.8/gems/rails-2.0.2/lib/commands/servers/webrick.rb:66
+    /usr/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:27:in `gem_original_require'
+    /usr/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:27:in `require'
+    /usr/lib/ruby/gems/1.8/gems/activesupport-2.0.2/lib/active_support/dependencies.rb:496:in `require'
+    /usr/lib/ruby/gems/1.8/gems/activesupport-2.0.2/lib/active_support/dependencies.rb:342:in `new_constants_in'
+    /usr/lib/ruby/gems/1.8/gems/activesupport-2.0.2/lib/active_support/dependencies.rb:496:in `require'
+    /usr/lib/ruby/gems/1.8/gems/rails-2.0.2/lib/commands/server.rb:39
+    /usr/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:27:in `gem_original_require'
+    /usr/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:27:in `require'
+    script/server:3
+
+Rendering /usr/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/templates/rescues/layout.erb (internal_server_error)
+
+
+Processing ProductsController#show (for 127.0.0.1 at 2008-12-05 14:36:10) [GET]
+  Session ID: BAh7BzoMY3NyZl9pZCIlMGFiYmZmZTZjZDg0MzFlYWJjMzY2MTk4MGE2ZTI4%0AMDkiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh%0Ac2h7AAY6CkB1c2VkewA%3D--17287179f12915c82191ef3b1b066e950b149fd5
+  Parameters: {"action"=>"show", "id"=>"1", "controller"=>"products"}
+  [4;36;1mProduct Columns (0.013363)[0m   [0;1mSHOW FIELDS FROM `products`[0m
+  [4;35;1mProduct Load (0.022351)[0m   [0mSELECT * FROM `products` WHERE (`products`.`id` = 1) [0m
+Rendering template within layouts/products
+Rendering products/show
+Completed in 0.06371 (15 reqs/sec) | Rendering: 0.00840 (13%) | DB: 0.03571 (56%) | 200 OK [http://homerj/products/1]
+
+
+Processing ProductsController#edit (for 127.0.0.1 at 2008-12-05 14:36:13) [GET]
+  Session ID: BAh7BzoMY3NyZl9pZCIlMGFiYmZmZTZjZDg0MzFlYWJjMzY2MTk4MGE2ZTI4%0AMDkiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh%0Ac2h7AAY6CkB1c2VkewA%3D--17287179f12915c82191ef3b1b066e950b149fd5
+  Parameters: {"action"=>"edit", "id"=>"1", "controller"=>"products"}
+  [4;36;1mProduct Columns (0.003619)[0m   [0;1mSHOW FIELDS FROM `products`[0m
+  [4;35;1mProduct Load (0.002653)[0m   [0mSELECT * FROM `products` WHERE (`products`.`id` = 1) [0m
+Rendering template within layouts/products
+Rendering products/edit
+Completed in 0.04582 (21 reqs/sec) | Rendering: 0.01640 (35%) | DB: 0.00627 (13%) | 200 OK [http://homerj/products/1/edit]
+
+
+Processing ProductsController#update (for 127.0.0.1 at 2008-12-05 14:36:21) [PUT]
+  Session ID: BAh7BzoMY3NyZl9pZCIlMGFiYmZmZTZjZDg0MzFlYWJjMzY2MTk4MGE2ZTI4%0AMDkiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh%0Ac2h7AAY6CkB1c2VkewA%3D--17287179f12915c82191ef3b1b066e950b149fd5
+  Parameters: {"commit"=>"Update", "product"=>{"image_url"=>"", "title"=>"Fiat 131", "price"=>"200.00", "description"=>"Fiat 131 Abarth"}, "authenticity_token"=>"50bc61c040366f8308d9f6e7f5b8537c2421cb12", "_method"=>"put", "action"=>"update", "id"=>"1", "controller"=>"products"}
+  [4;36;1mProduct Columns (0.003710)[0m   [0;1mSHOW FIELDS FROM `products`[0m
+  [4;35;1mProduct Load (0.002071)[0m   [0mSELECT * FROM `products` WHERE (`products`.`id` = 1) [0m
+  [4;36;1mSQL (0.002020)[0m   [0;1mBEGIN[0m
+  [4;35;1mProduct Update (0.038100)[0m   [0mUPDATE `products` SET `created_at` = '2008-12-04 22:33:36', `title` = 'Fiat 131', `price` = '200.0', `description` = 'Fiat 131 Abarth', `updated_at` = '2008-12-05 14:36:21', `image_url` = '' WHERE `id` = 1[0m
+  [4;36;1mSQL (0.006948)[0m   [0;1mCOMMIT[0m
+Redirected to http://homerj:3001/products/1
+Completed in 0.08755 (11 reqs/sec) | DB: 0.05285 (60%) | 302 Found [http://homerj/products/1]
+
+
+Processing ProductsController#show (for 127.0.0.1 at 2008-12-05 14:36:21) [GET]
+  Session ID: BAh7BzoMY3NyZl9pZCIlMGFiYmZmZTZjZDg0MzFlYWJjMzY2MTk4MGE2ZTI4%0AMDkiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh%0Ac2h7BjoLbm90aWNlIiZQcm9kdWN0IHdhcyBzdWNjZXNzZnVsbHkgdXBkYXRl%0AZC4GOgpAdXNlZHsGOwdU--b25f1ce7261ea70aa2b00521371cf7820541c6a7
+  Parameters: {"action"=>"show", "id"=>"1", "controller"=>"products"}
+  [4;35;1mProduct Columns (0.006098)[0m   [0mSHOW FIELDS FROM `products`[0m
+  [4;36;1mProduct Load (0.004134)[0m   [0;1mSELECT * FROM `products` WHERE (`products`.`id` = 1) [0m
+Rendering template within layouts/products
+Rendering products/show
+Completed in 0.04135 (24 reqs/sec) | Rendering: 0.00583 (14%) | DB: 0.01023 (24%) | 200 OK [http://homerj/products/1]
+
+
+Processing ProductsController#index (for 127.0.0.1 at 2008-12-05 14:36:25) [GET]
+  Session ID: BAh7BzoMY3NyZl9pZCIlMGFiYmZmZTZjZDg0MzFlYWJjMzY2MTk4MGE2ZTI4%0AMDkiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh%0Ac2h7AAY6CkB1c2VkewA%3D--17287179f12915c82191ef3b1b066e950b149fd5
+  Parameters: {"action"=>"index", "controller"=>"products"}
+  [4;35;1mProduct Load (0.003300)[0m   [0mSELECT * FROM `products` [0m
+Rendering template within layouts/products
+Rendering products/index
+  [4;36;1mProduct Columns (0.003396)[0m   [0;1mSHOW FIELDS FROM `products`[0m
+Completed in 0.03362 (29 reqs/sec) | Rendering: 0.00805 (23%) | DB: 0.00670 (19%) | 200 OK [http://homerj/products]
+
+
+Processing ProductsController#new (for 127.0.0.1 at 2008-12-05 15:39:05) [GET]
+  Session ID: BAh7BzoMY3NyZl9pZCIlMGFiYmZmZTZjZDg0MzFlYWJjMzY2MTk4MGE2ZTI4%0AMDkiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh%0Ac2h7AAY6CkB1c2VkewA%3D--17287179f12915c82191ef3b1b066e950b149fd5
+  Parameters: {"action"=>"new", "controller"=>"products"}
+  [4;35;1mProduct Columns (0.008063)[0m   [0mSHOW FIELDS FROM `products`[0m
+Rendering template within layouts/products
+Rendering products/new
+Completed in 0.03706 (26 reqs/sec) | Rendering: 0.00913 (24%) | DB: 0.00806 (21%) | 200 OK [http://homerj/products/new]
+
+
+Processing ProductsController#create (for 127.0.0.1 at 2008-12-05 15:39:19) [POST]
+  Session ID: BAh7BzoMY3NyZl9pZCIlMGFiYmZmZTZjZDg0MzFlYWJjMzY2MTk4MGE2ZTI4%0AMDkiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh%0Ac2h7AAY6CkB1c2VkewA%3D--17287179f12915c82191ef3b1b066e950b149fd5
+  Parameters: {"commit"=>"Create", "product"=>{"image_url"=>"", "title"=>"Renault R5 Turbo", "price"=>"0.0", "description"=>""}, "authenticity_token"=>"50bc61c040366f8308d9f6e7f5b8537c2421cb12", "action"=>"create", "controller"=>"products"}
+  [4;36;1mProduct Columns (0.005584)[0m   [0;1mSHOW FIELDS FROM `products`[0m
+  [4;35;1mSQL (0.001423)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.003098)[0m   [0;1mCOMMIT[0m
+Rendering template within layouts/products
+Rendering products/new
+Completed in 0.06507 (15 reqs/sec) | Rendering: 0.00680 (10%) | DB: 0.01010 (15%) | 200 OK [http://homerj/products]
+
+
+Processing ProductsController#create (for 127.0.0.1 at 2008-12-05 15:39:46) [POST]
+  Session ID: BAh7BzoMY3NyZl9pZCIlMGFiYmZmZTZjZDg0MzFlYWJjMzY2MTk4MGE2ZTI4%0AMDkiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh%0Ac2h7AAY6CkB1c2VkewA%3D--17287179f12915c82191ef3b1b066e950b149fd5
+  Parameters: {"commit"=>"Create", "product"=>{"image_url"=>"/renault.jpg", "title"=>"Renault R5 Turbo", "price"=>"0.0", "description"=>"Turbo"}, "authenticity_token"=>"50bc61c040366f8308d9f6e7f5b8537c2421cb12", "action"=>"create", "controller"=>"products"}
+  [4;35;1mProduct Columns (0.003698)[0m   [0mSHOW FIELDS FROM `products`[0m
+  [4;36;1mSQL (0.000888)[0m   [0;1mBEGIN[0m
+  [4;35;1mProduct Create (0.027745)[0m   [0mINSERT INTO `products` (`image_url`, `updated_at`, `price`, `title`, `description`, `created_at`) VALUES('/renault.jpg', '2008-12-05 15:39:46', '0.0', 'Renault R5 Turbo', 'Turbo', '2008-12-05 15:39:46')[0m
+  [4;36;1mSQL (0.007385)[0m   [0;1mCOMMIT[0m
+Redirected to http://homerj:3001/products/2
+Completed in 0.07348 (13 reqs/sec) | DB: 0.03972 (54%) | 302 Found [http://homerj/products]
+
+
+Processing ProductsController#show (for 127.0.0.1 at 2008-12-05 15:39:46) [GET]
+  Session ID: BAh7BzoMY3NyZl9pZCIlMGFiYmZmZTZjZDg0MzFlYWJjMzY2MTk4MGE2ZTI4%0AMDkiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh%0Ac2h7BjoLbm90aWNlIiZQcm9kdWN0IHdhcyBzdWNjZXNzZnVsbHkgY3JlYXRl%0AZC4GOgpAdXNlZHsGOwdU--a38172a41a4eac403a8e14c363294bb3232caf62
+  Parameters: {"action"=>"show", "id"=>"2", "controller"=>"products"}
+  [4;35;1mProduct Columns (0.027990)[0m   [0mSHOW FIELDS FROM `products`[0m
+  [4;36;1mProduct Load (0.002130)[0m   [0;1mSELECT * FROM `products` WHERE (`products`.`id` = 2) [0m
+Rendering template within layouts/products
+Rendering products/show
+Completed in 0.05444 (18 reqs/sec) | Rendering: 0.00566 (10%) | DB: 0.03012 (55%) | 200 OK [http://homerj/products/2]
+
+
+Processing ProductsController#index (for 127.0.0.1 at 2008-12-05 15:39:52) [GET]
+  Session ID: BAh7BzoMY3NyZl9pZCIlMGFiYmZmZTZjZDg0MzFlYWJjMzY2MTk4MGE2ZTI4%0AMDkiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh%0Ac2h7AAY6CkB1c2VkewA%3D--17287179f12915c82191ef3b1b066e950b149fd5
+  Parameters: {"action"=>"index", "controller"=>"products"}
+  [4;35;1mProduct Load (0.002615)[0m   [0mSELECT * FROM `products` [0m
+Rendering template within layouts/products
+Rendering products/index
+  [4;36;1mProduct Columns (0.033347)[0m   [0;1mSHOW FIELDS FROM `products`[0m
+Completed in 0.06784 (14 reqs/sec) | Rendering: 0.00859 (12%) | DB: 0.03596 (53%) | 200 OK [http://homerj/products]
+
+
+Processing ProductsController#edit (for 127.0.0.1 at 2008-12-05 15:39:55) [GET]
+  Session ID: BAh7BzoMY3NyZl9pZCIlMGFiYmZmZTZjZDg0MzFlYWJjMzY2MTk4MGE2ZTI4%0AMDkiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh%0Ac2h7AAY6CkB1c2VkewA%3D--17287179f12915c82191ef3b1b066e950b149fd5
+  Parameters: {"action"=>"edit", "id"=>"2", "controller"=>"products"}
+  [4;35;1mProduct Columns (0.003309)[0m   [0mSHOW FIELDS FROM `products`[0m
+  [4;36;1mProduct Load (0.002175)[0m   [0;1mSELECT * FROM `products` WHERE (`products`.`id` = 2) [0m
+Rendering template within layouts/products
+Rendering products/edit
+Completed in 0.03183 (31 reqs/sec) | Rendering: 0.00870 (27%) | DB: 0.00548 (17%) | 200 OK [http://homerj/products/2/edit]
+
+
+Processing ProductsController#update (for 127.0.0.1 at 2008-12-05 15:40:01) [PUT]
+  Session ID: BAh7BzoMY3NyZl9pZCIlMGFiYmZmZTZjZDg0MzFlYWJjMzY2MTk4MGE2ZTI4%0AMDkiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh%0Ac2h7AAY6CkB1c2VkewA%3D--17287179f12915c82191ef3b1b066e950b149fd5
+  Parameters: {"commit"=>"Update", "product"=>{"image_url"=>"/renault.jpg", "title"=>"Renault R5 Turbo", "price"=>"-1", "description"=>"Turbo"}, "authenticity_token"=>"50bc61c040366f8308d9f6e7f5b8537c2421cb12", "_method"=>"put", "action"=>"update", "id"=>"2", "controller"=>"products"}
+  [4;35;1mProduct Columns (0.003699)[0m   [0mSHOW FIELDS FROM `products`[0m
+  [4;36;1mProduct Load (0.026303)[0m   [0;1mSELECT * FROM `products` WHERE (`products`.`id` = 2) [0m
+  [4;35;1mSQL (0.001783)[0m   [0mBEGIN[0m
+  [4;36;1mProduct Update (0.002345)[0m   [0;1mUPDATE `products` SET `created_at` = '2008-12-05 15:39:46', `title` = 'Renault R5 Turbo', `price` = '-1.0', `description` = 'Turbo', `updated_at` = '2008-12-05 15:40:01', `image_url` = '/renault.jpg' WHERE `id` = 2[0m
+  [4;35;1mSQL (0.030452)[0m   [0mCOMMIT[0m
+Redirected to http://homerj:3001/products/2
+Completed in 0.09603 (10 reqs/sec) | DB: 0.06458 (67%) | 302 Found [http://homerj/products/2]
+
+
+Processing ProductsController#show (for 127.0.0.1 at 2008-12-05 15:40:01) [GET]
+  Session ID: BAh7BzoMY3NyZl9pZCIlMGFiYmZmZTZjZDg0MzFlYWJjMzY2MTk4MGE2ZTI4%0AMDkiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh%0Ac2h7BjoLbm90aWNlIiZQcm9kdWN0IHdhcyBzdWNjZXNzZnVsbHkgdXBkYXRl%0AZC4GOgpAdXNlZHsGOwdU--b25f1ce7261ea70aa2b00521371cf7820541c6a7
+  Parameters: {"action"=>"show", "id"=>"2", "controller"=>"products"}
+  [4;36;1mProduct Columns (0.010261)[0m   [0;1mSHOW FIELDS FROM `products`[0m
+  [4;35;1mProduct Load (0.012199)[0m   [0mSELECT * FROM `products` WHERE (`products`.`id` = 2) [0m
+Rendering template within layouts/products
+Rendering products/show
+Completed in 0.04657 (21 reqs/sec) | Rendering: 0.00566 (12%) | DB: 0.02246 (48%) | 200 OK [http://homerj/products/2]
+
+
+Processing ProductsController#index (for 127.0.0.1 at 2008-12-05 15:51:33) [GET]
+  Session ID: BAh7BzoMY3NyZl9pZCIlMGFiYmZmZTZjZDg0MzFlYWJjMzY2MTk4MGE2ZTI4%0AMDkiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh%0Ac2h7AAY6CkB1c2VkewA%3D--17287179f12915c82191ef3b1b066e950b149fd5
+  Parameters: {"action"=>"index", "controller"=>"products"}
+
+
+SyntaxError (/pub/CODE/ruby/depot/app/models/product.rb:10: syntax error):
+    /usr/lib/ruby/gems/1.8/gems/activesupport-2.0.2/lib/active_support/dependencies.rb:203:in `load_without_new_constant_marking'
+    /usr/lib/ruby/gems/1.8/gems/activesupport-2.0.2/lib/active_support/dependencies.rb:203:in `load_file'
+    /usr/lib/ruby/gems/1.8/gems/activesupport-2.0.2/lib/active_support/dependencies.rb:342:in `new_constants_in'
+    /usr/lib/ruby/gems/1.8/gems/activesupport-2.0.2/lib/active_support/dependencies.rb:202:in `load_file'
+    /usr/lib/ruby/gems/1.8/gems/activesupport-2.0.2/lib/active_support/dependencies.rb:94:in `require_or_load'
+    /usr/lib/ruby/gems/1.8/gems/activesupport-2.0.2/lib/active_support/dependencies.rb:248:in `load_missing_constant'
+    /usr/lib/ruby/gems/1.8/gems/activesupport-2.0.2/lib/active_support/dependencies.rb:453:in `const_missing'
+    /usr/lib/ruby/gems/1.8/gems/activesupport-2.0.2/lib/active_support/dependencies.rb:465:in `const_missing'
+    /usr/lib/ruby/gems/1.8/gems/activesupport-2.0.2/lib/active_support/dependencies.rb:260:in `load_missing_constant'
+    /usr/lib/ruby/gems/1.8/gems/activesupport-2.0.2/lib/active_support/dependencies.rb:469:in `const_missing'
+    /app/controllers/products_controller.rb:5:in `index'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/base.rb:1158:in `send'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/base.rb:1158:in `perform_action_without_filters'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/filters.rb:697:in `call_filters'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/filters.rb:689:in `perform_action_without_benchmark'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    /usr/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/rescue.rb:199:in `perform_action_without_caching'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/caching.rb:678:in `perform_action'
+    /usr/lib/ruby/gems/1.8/gems/activerecord-2.0.2/lib/active_record/connection_adapters/abstract/query_cache.rb:33:in `cache'
+    /usr/lib/ruby/gems/1.8/gems/activerecord-2.0.2/lib/active_record/query_cache.rb:8:in `cache'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/caching.rb:677:in `perform_action'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/base.rb:524:in `send'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/base.rb:524:in `process_without_filters'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/filters.rb:685:in `process_without_session_management_support'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/session_management.rb:123:in `process'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/base.rb:388:in `process'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/dispatcher.rb:171:in `handle_request'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/dispatcher.rb:115:in `dispatch'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/dispatcher.rb:126:in `dispatch_cgi'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/dispatcher.rb:9:in `dispatch'
+    /usr/lib/ruby/gems/1.8/gems/rails-2.0.2/lib/webrick_server.rb:112:in `handle_dispatch'
+    /usr/lib/ruby/gems/1.8/gems/rails-2.0.2/lib/webrick_server.rb:78:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+    /usr/lib/ruby/gems/1.8/gems/rails-2.0.2/lib/webrick_server.rb:62:in `dispatch'
+    /usr/lib/ruby/gems/1.8/gems/rails-2.0.2/lib/commands/servers/webrick.rb:66
+    /usr/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:27:in `gem_original_require'
+    /usr/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:27:in `require'
+    /usr/lib/ruby/gems/1.8/gems/activesupport-2.0.2/lib/active_support/dependencies.rb:496:in `require'
+    /usr/lib/ruby/gems/1.8/gems/activesupport-2.0.2/lib/active_support/dependencies.rb:342:in `new_constants_in'
+    /usr/lib/ruby/gems/1.8/gems/activesupport-2.0.2/lib/active_support/dependencies.rb:496:in `require'
+    /usr/lib/ruby/gems/1.8/gems/rails-2.0.2/lib/commands/server.rb:39
+    /usr/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:27:in `gem_original_require'
+    /usr/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:27:in `require'
+    script/server:3
+
+Rendering /usr/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/templates/rescues/layout.erb (internal_server_error)
+
+
+Processing ProductsController#index (for 127.0.0.1 at 2008-12-05 15:52:03) [GET]
+  Session ID: BAh7BzoMY3NyZl9pZCIlMGFiYmZmZTZjZDg0MzFlYWJjMzY2MTk4MGE2ZTI4%0AMDkiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh%0Ac2h7AAY6CkB1c2VkewA%3D--17287179f12915c82191ef3b1b066e950b149fd5
+  Parameters: {"action"=>"index", "controller"=>"products"}
+
+
+SyntaxError (/pub/CODE/ruby/depot/app/models/product.rb:10: syntax error):
+    /usr/lib/ruby/gems/1.8/gems/activesupport-2.0.2/lib/active_support/dependencies.rb:203:in `load_without_new_constant_marking'
+    /usr/lib/ruby/gems/1.8/gems/activesupport-2.0.2/lib/active_support/dependencies.rb:203:in `load_file'
+    /usr/lib/ruby/gems/1.8/gems/activesupport-2.0.2/lib/active_support/dependencies.rb:342:in `new_constants_in'
+    /usr/lib/ruby/gems/1.8/gems/activesupport-2.0.2/lib/active_support/dependencies.rb:202:in `load_file'
+    /usr/lib/ruby/gems/1.8/gems/activesupport-2.0.2/lib/active_support/dependencies.rb:94:in `require_or_load'
+    /usr/lib/ruby/gems/1.8/gems/activesupport-2.0.2/lib/active_support/dependencies.rb:248:in `load_missing_constant'
+    /usr/lib/ruby/gems/1.8/gems/activesupport-2.0.2/lib/active_support/dependencies.rb:453:in `const_missing'
+    /usr/lib/ruby/gems/1.8/gems/activesupport-2.0.2/lib/active_support/dependencies.rb:465:in `const_missing'
+    /usr/lib/ruby/gems/1.8/gems/activesupport-2.0.2/lib/active_support/dependencies.rb:260:in `load_missing_constant'
+    /usr/lib/ruby/gems/1.8/gems/activesupport-2.0.2/lib/active_support/dependencies.rb:469:in `const_missing'
+    /app/controllers/products_controller.rb:5:in `index'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/base.rb:1158:in `send'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/base.rb:1158:in `perform_action_without_filters'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/filters.rb:697:in `call_filters'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/filters.rb:689:in `perform_action_without_benchmark'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    /usr/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/rescue.rb:199:in `perform_action_without_caching'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/caching.rb:678:in `perform_action'
+    /usr/lib/ruby/gems/1.8/gems/activerecord-2.0.2/lib/active_record/connection_adapters/abstract/query_cache.rb:33:in `cache'
+    /usr/lib/ruby/gems/1.8/gems/activerecord-2.0.2/lib/active_record/query_cache.rb:8:in `cache'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/caching.rb:677:in `perform_action'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/base.rb:524:in `send'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/base.rb:524:in `process_without_filters'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/filters.rb:685:in `process_without_session_management_support'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/session_management.rb:123:in `process'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/base.rb:388:in `process'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/dispatcher.rb:171:in `handle_request'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/dispatcher.rb:115:in `dispatch'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/dispatcher.rb:126:in `dispatch_cgi'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/dispatcher.rb:9:in `dispatch'
+    /usr/lib/ruby/gems/1.8/gems/rails-2.0.2/lib/webrick_server.rb:112:in `handle_dispatch'
+    /usr/lib/ruby/gems/1.8/gems/rails-2.0.2/lib/webrick_server.rb:78:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+    /usr/lib/ruby/gems/1.8/gems/rails-2.0.2/lib/webrick_server.rb:62:in `dispatch'
+    /usr/lib/ruby/gems/1.8/gems/rails-2.0.2/lib/commands/servers/webrick.rb:66
+    /usr/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:27:in `gem_original_require'
+    /usr/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:27:in `require'
+    /usr/lib/ruby/gems/1.8/gems/activesupport-2.0.2/lib/active_support/dependencies.rb:496:in `require'
+    /usr/lib/ruby/gems/1.8/gems/activesupport-2.0.2/lib/active_support/dependencies.rb:342:in `new_constants_in'
+    /usr/lib/ruby/gems/1.8/gems/activesupport-2.0.2/lib/active_support/dependencies.rb:496:in `require'
+    /usr/lib/ruby/gems/1.8/gems/rails-2.0.2/lib/commands/server.rb:39
+    /usr/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:27:in `gem_original_require'
+    /usr/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:27:in `require'
+    script/server:3
+
+Rendering /usr/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/templates/rescues/layout.erb (internal_server_error)
+
+
+Processing ProductsController#index (for 127.0.0.1 at 2008-12-05 15:52:27) [GET]
+  Session ID: BAh7BzoMY3NyZl9pZCIlMGFiYmZmZTZjZDg0MzFlYWJjMzY2MTk4MGE2ZTI4%0AMDkiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh%0Ac2h7AAY6CkB1c2VkewA%3D--17287179f12915c82191ef3b1b066e950b149fd5
+  Parameters: {"action"=>"index", "controller"=>"products"}
+  [4;36;1mProduct Load (0.005294)[0m   [0;1mSELECT * FROM `products` [0m
+Rendering template within layouts/products
+Rendering products/index
+  [4;35;1mProduct Columns (0.004935)[0m   [0mSHOW FIELDS FROM `products`[0m
+Completed in 0.06392 (15 reqs/sec) | Rendering: 0.01187 (18%) | DB: 0.01023 (16%) | 200 OK [http://homerj/products]
+
+
+Processing ProductsController#destroy (for 127.0.0.1 at 2008-12-05 15:52:33) [DELETE]
+  Session ID: BAh7BzoMY3NyZl9pZCIlMGFiYmZmZTZjZDg0MzFlYWJjMzY2MTk4MGE2ZTI4%0AMDkiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh%0Ac2h7AAY6CkB1c2VkewA%3D--17287179f12915c82191ef3b1b066e950b149fd5
+  Parameters: {"authenticity_token"=>"50bc61c040366f8308d9f6e7f5b8537c2421cb12", "_method"=>"delete", "action"=>"destroy", "id"=>"2", "controller"=>"products"}
+  [4;36;1mProduct Columns (0.005499)[0m   [0;1mSHOW FIELDS FROM `products`[0m
+  [4;35;1mProduct Load (0.002527)[0m   [0mSELECT * FROM `products` WHERE (`products`.`id` = 2) [0m
+  [4;36;1mSQL (0.002392)[0m   [0;1mBEGIN[0m
+  [4;35;1mProduct Destroy (0.022712)[0m   [0m DELETE FROM `products`
+ WHERE `id` = 2
+[0m
+  [4;36;1mSQL (0.008237)[0m   [0;1mCOMMIT[0m
+Redirected to http://homerj:3001/products
+Completed in 0.11990 (8 reqs/sec) | DB: 0.04137 (34%) | 302 Found [http://homerj/products/2]
+
+
+Processing ProductsController#index (for 127.0.0.1 at 2008-12-05 15:52:33) [GET]
+  Session ID: BAh7BzoMY3NyZl9pZCIlMGFiYmZmZTZjZDg0MzFlYWJjMzY2MTk4MGE2ZTI4%0AMDkiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh%0Ac2h7AAY6CkB1c2VkewA%3D--17287179f12915c82191ef3b1b066e950b149fd5
+  Parameters: {"action"=>"index", "controller"=>"products"}
+  [4;35;1mProduct Load (0.005255)[0m   [0mSELECT * FROM `products` [0m
+Rendering template within layouts/products
+Rendering products/index
+  [4;36;1mProduct Columns (0.006155)[0m   [0;1mSHOW FIELDS FROM `products`[0m
+Completed in 0.03738 (26 reqs/sec) | Rendering: 0.00880 (23%) | DB: 0.01141 (30%) | 200 OK [http://homerj/products]
+
+
+Processing ProductsController#new (for 127.0.0.1 at 2008-12-05 15:52:36) [GET]
+  Session ID: BAh7BzoMY3NyZl9pZCIlMGFiYmZmZTZjZDg0MzFlYWJjMzY2MTk4MGE2ZTI4%0AMDkiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh%0Ac2h7AAY6CkB1c2VkewA%3D--17287179f12915c82191ef3b1b066e950b149fd5
+  Parameters: {"action"=>"new", "controller"=>"products"}
+  [4;35;1mProduct Columns (0.006658)[0m   [0mSHOW FIELDS FROM `products`[0m
+Rendering template within layouts/products
+Rendering products/new
+Completed in 0.03421 (29 reqs/sec) | Rendering: 0.00869 (25%) | DB: 0.00666 (19%) | 200 OK [http://homerj/products/new]
+
+
+Processing ProductsController#create (for 127.0.0.1 at 2008-12-05 15:52:42) [POST]
+  Session ID: BAh7BzoMY3NyZl9pZCIlMGFiYmZmZTZjZDg0MzFlYWJjMzY2MTk4MGE2ZTI4%0AMDkiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh%0Ac2h7AAY6CkB1c2VkewA%3D--17287179f12915c82191ef3b1b066e950b149fd5
+  Parameters: {"commit"=>"Create", "product"=>{"image_url"=>"", "title"=>"Renault R5 Turbo", "price"=>"0.0", "description"=>""}, "authenticity_token"=>"50bc61c040366f8308d9f6e7f5b8537c2421cb12", "action"=>"create", "controller"=>"products"}
+  [4;36;1mProduct Columns (0.011255)[0m   [0;1mSHOW FIELDS FROM `products`[0m
+  [4;35;1mSQL (0.000548)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.009936)[0m   [0;1mROLLBACK[0m
+
+
+NameError (undefined local variable or method `error' for #<Product:0xb7abe4bc>):
+    /usr/lib/ruby/gems/1.8/gems/activerecord-2.0.2/lib/active_record/attribute_methods.rb:205:in `method_missing'
+    /app/models/product.rb:9:in `price_must_be_at_least_a_cent'
+    /usr/lib/ruby/gems/1.8/gems/activerecord-2.0.2/lib/active_record/validations.rb:1000:in `send'
+    /usr/lib/ruby/gems/1.8/gems/activerecord-2.0.2/lib/active_record/validations.rb:1000:in `run_validations'
+    /usr/lib/ruby/gems/1.8/gems/activerecord-2.0.2/lib/active_record/validations.rb:998:in `each'
+    /usr/lib/ruby/gems/1.8/gems/activerecord-2.0.2/lib/active_record/validations.rb:998:in `run_validations'
+    /usr/lib/ruby/gems/1.8/gems/activerecord-2.0.2/lib/active_record/validations.rb:962:in `valid_without_callbacks?'
+    /usr/lib/ruby/gems/1.8/gems/activerecord-2.0.2/lib/active_record/callbacks.rb:273:in `valid?'
+    /usr/lib/ruby/gems/1.8/gems/activerecord-2.0.2/lib/active_record/validations.rb:933:in `save_without_transactions'
+    /usr/lib/ruby/gems/1.8/gems/activerecord-2.0.2/lib/active_record/transactions.rb:108:in `save'
+    /usr/lib/ruby/gems/1.8/gems/activerecord-2.0.2/lib/active_record/connection_adapters/abstract/database_statements.rb:66:in `transaction'
+    /usr/lib/ruby/gems/1.8/gems/activerecord-2.0.2/lib/active_record/transactions.rb:80:in `transaction'
+    /usr/lib/ruby/gems/1.8/gems/activerecord-2.0.2/lib/active_record/transactions.rb:100:in `transaction'
+    /usr/lib/ruby/gems/1.8/gems/activerecord-2.0.2/lib/active_record/transactions.rb:108:in `save'
+    /usr/lib/ruby/gems/1.8/gems/activerecord-2.0.2/lib/active_record/transactions.rb:120:in `rollback_active_record_state!'
+    /usr/lib/ruby/gems/1.8/gems/activerecord-2.0.2/lib/active_record/transactions.rb:108:in `save'
+    /app/controllers/products_controller.rb:46:in `create'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/mime_responds.rb:106:in `call'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/mime_responds.rb:106:in `respond_to'
+    /app/controllers/products_controller.rb:45:in `create'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/base.rb:1158:in `send'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/base.rb:1158:in `perform_action_without_filters'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/filters.rb:697:in `call_filters'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/filters.rb:689:in `perform_action_without_benchmark'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    /usr/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/rescue.rb:199:in `perform_action_without_caching'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/caching.rb:678:in `perform_action'
+    /usr/lib/ruby/gems/1.8/gems/activerecord-2.0.2/lib/active_record/connection_adapters/abstract/query_cache.rb:33:in `cache'
+    /usr/lib/ruby/gems/1.8/gems/activerecord-2.0.2/lib/active_record/query_cache.rb:8:in `cache'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/caching.rb:677:in `perform_action'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/base.rb:524:in `send'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/base.rb:524:in `process_without_filters'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/filters.rb:685:in `process_without_session_management_support'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/session_management.rb:123:in `process'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/base.rb:388:in `process'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/dispatcher.rb:171:in `handle_request'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/dispatcher.rb:115:in `dispatch'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/dispatcher.rb:126:in `dispatch_cgi'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/dispatcher.rb:9:in `dispatch'
+    /usr/lib/ruby/gems/1.8/gems/rails-2.0.2/lib/webrick_server.rb:112:in `handle_dispatch'
+    /usr/lib/ruby/gems/1.8/gems/rails-2.0.2/lib/webrick_server.rb:78:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+    /usr/lib/ruby/gems/1.8/gems/rails-2.0.2/lib/webrick_server.rb:62:in `dispatch'
+    /usr/lib/ruby/gems/1.8/gems/rails-2.0.2/lib/commands/servers/webrick.rb:66
+    /usr/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:27:in `gem_original_require'
+    /usr/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:27:in `require'
+    /usr/lib/ruby/gems/1.8/gems/activesupport-2.0.2/lib/active_support/dependencies.rb:496:in `require'
+    /usr/lib/ruby/gems/1.8/gems/activesupport-2.0.2/lib/active_support/dependencies.rb:342:in `new_constants_in'
+    /usr/lib/ruby/gems/1.8/gems/activesupport-2.0.2/lib/active_support/dependencies.rb:496:in `require'
+    /usr/lib/ruby/gems/1.8/gems/rails-2.0.2/lib/commands/server.rb:39
+    /usr/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:27:in `gem_original_require'
+    /usr/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:27:in `require'
+    script/server:3
+
+Rendering /usr/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/templates/rescues/layout.erb (internal_server_error)
+
+
+Processing ProductsController#create (for 127.0.0.1 at 2008-12-05 15:53:12) [POST]
+  Session ID: BAh7BzoMY3NyZl9pZCIlMGFiYmZmZTZjZDg0MzFlYWJjMzY2MTk4MGE2ZTI4%0AMDkiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh%0Ac2h7AAY6CkB1c2VkewA%3D--17287179f12915c82191ef3b1b066e950b149fd5
+  Parameters: {"commit"=>"Create", "product"=>{"image_url"=>"", "title"=>"Renault R5 Turbo", "price"=>"0.0", "description"=>""}, "authenticity_token"=>"50bc61c040366f8308d9f6e7f5b8537c2421cb12", "action"=>"create", "controller"=>"products"}
+  [4;35;1mProduct Columns (0.006587)[0m   [0mSHOW FIELDS FROM `products`[0m
+  [4;36;1mSQL (0.000850)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.001210)[0m   [0mCOMMIT[0m
+Rendering template within layouts/products
+Rendering products/new
+Completed in 0.03709 (26 reqs/sec) | Rendering: 0.00659 (17%) | DB: 0.03039 (81%) | 200 OK [http://homerj/products]
+
+
+Processing ProductsController#create (for 127.0.0.1 at 2008-12-05 15:53:26) [POST]
+  Session ID: BAh7BzoMY3NyZl9pZCIlMGFiYmZmZTZjZDg0MzFlYWJjMzY2MTk4MGE2ZTI4%0AMDkiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh%0Ac2h7AAY6CkB1c2VkewA%3D--17287179f12915c82191ef3b1b066e950b149fd5
+  Parameters: {"commit"=>"Create", "product"=>{"image_url"=>"/renault.jpg", "title"=>"Renault R5 Turbo", "price"=>"0.0", "description"=>"turbo"}, "authenticity_token"=>"50bc61c040366f8308d9f6e7f5b8537c2421cb12", "action"=>"create", "controller"=>"products"}
+  [4;36;1mProduct Columns (0.012114)[0m   [0;1mSHOW FIELDS FROM `products`[0m
+  [4;35;1mSQL (0.006954)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.002767)[0m   [0;1mCOMMIT[0m
+Rendering template within layouts/products
+Rendering products/new
+Completed in 0.05660 (17 reqs/sec) | Rendering: 0.00618 (10%) | DB: 0.02183 (38%) | 200 OK [http://homerj/products]
+
+
+Processing ProductsController#create (for 127.0.0.1 at 2008-12-05 15:53:34) [POST]
+  Session ID: BAh7BzoMY3NyZl9pZCIlMGFiYmZmZTZjZDg0MzFlYWJjMzY2MTk4MGE2ZTI4%0AMDkiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh%0Ac2h7AAY6CkB1c2VkewA%3D--17287179f12915c82191ef3b1b066e950b149fd5
+  Parameters: {"commit"=>"Create", "product"=>{"image_url"=>"/renault.jpg", "title"=>"Renault R5 Turbo", "price"=>"100.00", "description"=>"turbo"}, "authenticity_token"=>"50bc61c040366f8308d9f6e7f5b8537c2421cb12", "action"=>"create", "controller"=>"products"}
+  [4;35;1mProduct Columns (0.005734)[0m   [0mSHOW FIELDS FROM `products`[0m
+  [4;36;1mSQL (0.010728)[0m   [0;1mBEGIN[0m
+  [4;35;1mProduct Create (0.010089)[0m   [0mINSERT INTO `products` (`image_url`, `updated_at`, `price`, `title`, `description`, `created_at`) VALUES('/renault.jpg', '2008-12-05 15:53:34', '100.0', 'Renault R5 Turbo', 'turbo', '2008-12-05 15:53:34')[0m
+  [4;36;1mSQL (0.006054)[0m   [0;1mCOMMIT[0m
+Redirected to http://homerj:3001/products/3
+Completed in 0.06312 (15 reqs/sec) | DB: 0.03261 (51%) | 302 Found [http://homerj/products]
+
+
+Processing ProductsController#show (for 127.0.0.1 at 2008-12-05 15:53:34) [GET]
+  Session ID: BAh7BzoMY3NyZl9pZCIlMGFiYmZmZTZjZDg0MzFlYWJjMzY2MTk4MGE2ZTI4%0AMDkiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh%0Ac2h7BjoLbm90aWNlIiZQcm9kdWN0IHdhcyBzdWNjZXNzZnVsbHkgY3JlYXRl%0AZC4GOgpAdXNlZHsGOwdU--a38172a41a4eac403a8e14c363294bb3232caf62
+  Parameters: {"action"=>"show", "id"=>"3", "controller"=>"products"}
+  [4;35;1mProduct Columns (0.003442)[0m   [0mSHOW FIELDS FROM `products`[0m
+  [4;36;1mProduct Load (0.004488)[0m   [0;1mSELECT * FROM `products` WHERE (`products`.`id` = 3) [0m
+Rendering template within layouts/products
+Rendering products/show
+Completed in 0.04111 (24 reqs/sec) | Rendering: 0.00877 (21%) | DB: 0.00793 (19%) | 200 OK [http://homerj/products/3]
+
+
+Processing ProductsController#index (for 127.0.0.1 at 2008-12-05 15:53:37) [GET]
+  Session ID: BAh7BzoMY3NyZl9pZCIlMGFiYmZmZTZjZDg0MzFlYWJjMzY2MTk4MGE2ZTI4%0AMDkiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh%0Ac2h7AAY6CkB1c2VkewA%3D--17287179f12915c82191ef3b1b066e950b149fd5
+  Parameters: {"action"=>"index", "controller"=>"products"}
+  [4;35;1mProduct Load (0.002173)[0m   [0mSELECT * FROM `products` [0m
+Rendering template within layouts/products
+Rendering products/index
+  [4;36;1mProduct Columns (0.088136)[0m   [0;1mSHOW FIELDS FROM `products`[0m
+Completed in 0.14745 (6 reqs/sec) | Rendering: 0.03816 (25%) | DB: 0.09031 (61%) | 200 OK [http://homerj/products]
+
+
+Processing ProductsController#edit (for 127.0.0.1 at 2008-12-05 15:53:47) [GET]
+  Session ID: BAh7BzoMY3NyZl9pZCIlMGFiYmZmZTZjZDg0MzFlYWJjMzY2MTk4MGE2ZTI4%0AMDkiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh%0Ac2h7AAY6CkB1c2VkewA%3D--17287179f12915c82191ef3b1b066e950b149fd5
+  Parameters: {"action"=>"edit", "id"=>"1", "controller"=>"products"}
+  [4;35;1mProduct Columns (0.005742)[0m   [0mSHOW FIELDS FROM `products`[0m
+  [4;36;1mProduct Load (0.002290)[0m   [0;1mSELECT * FROM `products` WHERE (`products`.`id` = 1) [0m
+Rendering template within layouts/products
+Rendering products/edit
+Completed in 0.03882 (25 reqs/sec) | Rendering: 0.01040 (26%) | DB: 0.00803 (20%) | 200 OK [http://homerj/products/1/edit]
+
+
+Processing ProductsController#update (for 127.0.0.1 at 2008-12-05 15:53:52) [PUT]
+  Session ID: BAh7BzoMY3NyZl9pZCIlMGFiYmZmZTZjZDg0MzFlYWJjMzY2MTk4MGE2ZTI4%0AMDkiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh%0Ac2h7AAY6CkB1c2VkewA%3D--17287179f12915c82191ef3b1b066e950b149fd5
+  Parameters: {"commit"=>"Update", "product"=>{"image_url"=>"", "title"=>"Fiat 131", "price"=>"-200.00", "description"=>"Fiat 131 Abarth"}, "authenticity_token"=>"50bc61c040366f8308d9f6e7f5b8537c2421cb12", "_method"=>"put", "action"=>"update", "id"=>"1", "controller"=>"products"}
+  [4;35;1mProduct Columns (0.003734)[0m   [0mSHOW FIELDS FROM `products`[0m
+  [4;36;1mProduct Load (0.001901)[0m   [0;1mSELECT * FROM `products` WHERE (`products`.`id` = 1) [0m
+  [4;35;1mSQL (0.000367)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.000344)[0m   [0;1mCOMMIT[0m
+Rendering template within layouts/products
+Rendering products/edit
+Completed in 0.03801 (26 reqs/sec) | Rendering: 0.00766 (20%) | DB: 0.00635 (16%) | 200 OK [http://homerj/products/1]
+
+
+Processing ProductsController#update (for 127.0.0.1 at 2008-12-05 15:54:07) [PUT]
+  Session ID: BAh7BzoMY3NyZl9pZCIlMGFiYmZmZTZjZDg0MzFlYWJjMzY2MTk4MGE2ZTI4%0AMDkiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh%0Ac2h7AAY6CkB1c2VkewA%3D--17287179f12915c82191ef3b1b066e950b149fd5
+  Parameters: {"commit"=>"Update", "product"=>{"image_url"=>"/fiat.jpg", "title"=>"Fiat 131", "price"=>"", "description"=>"Fiat 131 Abarth"}, "authenticity_token"=>"50bc61c040366f8308d9f6e7f5b8537c2421cb12", "_method"=>"put", "action"=>"update", "id"=>"1", "controller"=>"products"}
+  [4;35;1mProduct Columns (0.009732)[0m   [0mSHOW FIELDS FROM `products`[0m
+  [4;36;1mProduct Load (0.011135)[0m   [0;1mSELECT * FROM `products` WHERE (`products`.`id` = 1) [0m
+  [4;35;1mSQL (0.009973)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.002396)[0m   [0;1mROLLBACK[0m
+
+
+NoMethodError (You have a nil object when you didn't expect it!
+The error occurred while evaluating nil.<):
+    /app/models/product.rb:8:in `price_must_be_at_least_a_cent'
+    /usr/lib/ruby/gems/1.8/gems/activerecord-2.0.2/lib/active_record/validations.rb:1000:in `send'
+    /usr/lib/ruby/gems/1.8/gems/activerecord-2.0.2/lib/active_record/validations.rb:1000:in `run_validations'
+    /usr/lib/ruby/gems/1.8/gems/activerecord-2.0.2/lib/active_record/validations.rb:998:in `each'
+    /usr/lib/ruby/gems/1.8/gems/activerecord-2.0.2/lib/active_record/validations.rb:998:in `run_validations'
+    /usr/lib/ruby/gems/1.8/gems/activerecord-2.0.2/lib/active_record/validations.rb:962:in `valid_without_callbacks?'
+    /usr/lib/ruby/gems/1.8/gems/activerecord-2.0.2/lib/active_record/callbacks.rb:273:in `valid?'
+    /usr/lib/ruby/gems/1.8/gems/activerecord-2.0.2/lib/active_record/validations.rb:933:in `save_without_transactions'
+    /usr/lib/ruby/gems/1.8/gems/activerecord-2.0.2/lib/active_record/transactions.rb:108:in `save'
+    /usr/lib/ruby/gems/1.8/gems/activerecord-2.0.2/lib/active_record/connection_adapters/abstract/database_statements.rb:66:in `transaction'
+    /usr/lib/ruby/gems/1.8/gems/activerecord-2.0.2/lib/active_record/transactions.rb:80:in `transaction'
+    /usr/lib/ruby/gems/1.8/gems/activerecord-2.0.2/lib/active_record/transactions.rb:100:in `transaction'
+    /usr/lib/ruby/gems/1.8/gems/activerecord-2.0.2/lib/active_record/transactions.rb:108:in `save'
+    /usr/lib/ruby/gems/1.8/gems/activerecord-2.0.2/lib/active_record/transactions.rb:120:in `rollback_active_record_state!'
+    /usr/lib/ruby/gems/1.8/gems/activerecord-2.0.2/lib/active_record/transactions.rb:108:in `save'
+    /usr/lib/ruby/gems/1.8/gems/activerecord-2.0.2/lib/active_record/base.rb:2034:in `update_attributes'
+    /app/controllers/products_controller.rb:63:in `update'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/mime_responds.rb:106:in `call'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/mime_responds.rb:106:in `respond_to'
+    /app/controllers/products_controller.rb:62:in `update'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/base.rb:1158:in `send'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/base.rb:1158:in `perform_action_without_filters'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/filters.rb:697:in `call_filters'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/filters.rb:689:in `perform_action_without_benchmark'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    /usr/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/rescue.rb:199:in `perform_action_without_caching'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/caching.rb:678:in `perform_action'
+    /usr/lib/ruby/gems/1.8/gems/activerecord-2.0.2/lib/active_record/connection_adapters/abstract/query_cache.rb:33:in `cache'
+    /usr/lib/ruby/gems/1.8/gems/activerecord-2.0.2/lib/active_record/query_cache.rb:8:in `cache'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/caching.rb:677:in `perform_action'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/base.rb:524:in `send'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/base.rb:524:in `process_without_filters'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/filters.rb:685:in `process_without_session_management_support'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/session_management.rb:123:in `process'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/base.rb:388:in `process'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/dispatcher.rb:171:in `handle_request'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/dispatcher.rb:115:in `dispatch'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/dispatcher.rb:126:in `dispatch_cgi'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/dispatcher.rb:9:in `dispatch'
+    /usr/lib/ruby/gems/1.8/gems/rails-2.0.2/lib/webrick_server.rb:112:in `handle_dispatch'
+    /usr/lib/ruby/gems/1.8/gems/rails-2.0.2/lib/webrick_server.rb:78:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+    /usr/lib/ruby/gems/1.8/gems/rails-2.0.2/lib/webrick_server.rb:62:in `dispatch'
+    /usr/lib/ruby/gems/1.8/gems/rails-2.0.2/lib/commands/servers/webrick.rb:66
+    /usr/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:27:in `gem_original_require'
+    /usr/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:27:in `require'
+    /usr/lib/ruby/gems/1.8/gems/activesupport-2.0.2/lib/active_support/dependencies.rb:496:in `require'
+    /usr/lib/ruby/gems/1.8/gems/activesupport-2.0.2/lib/active_support/dependencies.rb:342:in `new_constants_in'
+    /usr/lib/ruby/gems/1.8/gems/activesupport-2.0.2/lib/active_support/dependencies.rb:496:in `require'
+    /usr/lib/ruby/gems/1.8/gems/rails-2.0.2/lib/commands/server.rb:39
+    /usr/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:27:in `gem_original_require'
+    /usr/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:27:in `require'
+    script/server:3
+
+Rendering /usr/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/templates/rescues/layout.erb (internal_server_error)
+
+
+Processing ProductsController#update (for 127.0.0.1 at 2008-12-05 15:55:06) [PUT]
+  Session ID: BAh7BzoMY3NyZl9pZCIlMGFiYmZmZTZjZDg0MzFlYWJjMzY2MTk4MGE2ZTI4%0AMDkiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh%0Ac2h7AAY6CkB1c2VkewA%3D--17287179f12915c82191ef3b1b066e950b149fd5
+  Parameters: {"commit"=>"Update", "product"=>{"image_url"=>"/fiat.jpg", "title"=>"Fiat 131", "price"=>"", "description"=>"Fiat 131 Abarth"}, "authenticity_token"=>"50bc61c040366f8308d9f6e7f5b8537c2421cb12", "_method"=>"put", "action"=>"update", "id"=>"1", "controller"=>"products"}
+  [4;35;1mProduct Columns (0.004160)[0m   [0mSHOW FIELDS FROM `products`[0m
+  [4;36;1mProduct Load (0.001896)[0m   [0;1mSELECT * FROM `products` WHERE (`products`.`id` = 1) [0m
+  [4;35;1mSQL (0.001005)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.000333)[0m   [0;1mCOMMIT[0m
+Rendering template within layouts/products
+Rendering products/edit
+Completed in 0.04372 (22 reqs/sec) | Rendering: 0.00803 (18%) | DB: 0.04063 (92%) | 200 OK [http://homerj/products/1]
+
+
+Processing ProductsController#update (for 127.0.0.1 at 2008-12-05 15:55:11) [PUT]
+  Session ID: BAh7BzoMY3NyZl9pZCIlMGFiYmZmZTZjZDg0MzFlYWJjMzY2MTk4MGE2ZTI4%0AMDkiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh%0Ac2h7AAY6CkB1c2VkewA%3D--17287179f12915c82191ef3b1b066e950b149fd5
+  Parameters: {"commit"=>"Update", "product"=>{"image_url"=>"/fiat.jpg", "title"=>"Fiat 131", "price"=>"", "description"=>"Fiat 131 Abarth"}, "authenticity_token"=>"50bc61c040366f8308d9f6e7f5b8537c2421cb12", "_method"=>"put", "action"=>"update", "id"=>"1", "controller"=>"products"}
+  [4;35;1mProduct Columns (0.004484)[0m   [0mSHOW FIELDS FROM `products`[0m
+  [4;36;1mProduct Load (0.002239)[0m   [0;1mSELECT * FROM `products` WHERE (`products`.`id` = 1) [0m
+  [4;35;1mSQL (0.001570)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.001017)[0m   [0;1mCOMMIT[0m
+Rendering template within layouts/products
+Rendering products/edit
+Completed in 0.04265 (23 reqs/sec) | Rendering: 0.00658 (15%) | DB: 0.00931 (21%) | 200 OK [http://homerj/products/1]
+
+
+Processing ProductsController#update (for 127.0.0.1 at 2008-12-05 15:55:26) [PUT]
+  Session ID: BAh7BzoMY3NyZl9pZCIlMGFiYmZmZTZjZDg0MzFlYWJjMzY2MTk4MGE2ZTI4%0AMDkiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh%0Ac2h7AAY6CkB1c2VkewA%3D--17287179f12915c82191ef3b1b066e950b149fd5
+  Parameters: {"commit"=>"Update", "product"=>{"image_url"=>"/fiat.jpg", "title"=>"Fiat 131", "price"=>"200.00", "description"=>"Fiat 131 Abarth"}, "authenticity_token"=>"50bc61c040366f8308d9f6e7f5b8537c2421cb12", "_method"=>"put", "action"=>"update", "id"=>"1", "controller"=>"products"}
+  [4;35;1mProduct Columns (0.004693)[0m   [0mSHOW FIELDS FROM `products`[0m
+  [4;36;1mProduct Load (0.026428)[0m   [0;1mSELECT * FROM `products` WHERE (`products`.`id` = 1) [0m
+  [4;35;1mSQL (0.002461)[0m   [0mBEGIN[0m
+  [4;36;1mProduct Update (0.002249)[0m   [0;1mUPDATE `products` SET `created_at` = '2008-12-04 22:33:36', `title` = 'Fiat 131', `price` = '200.0', `description` = 'Fiat 131 Abarth', `updated_at` = '2008-12-05 15:55:26', `image_url` = '/fiat.jpg' WHERE `id` = 1[0m
+  [4;35;1mSQL (0.032576)[0m   [0mCOMMIT[0m
+Redirected to http://homerj:3001/products/1
+Completed in 0.10069 (9 reqs/sec) | DB: 0.06841 (67%) | 302 Found [http://homerj/products/1]
+
+
+Processing ProductsController#show (for 127.0.0.1 at 2008-12-05 15:55:26) [GET]
+  Session ID: BAh7BzoMY3NyZl9pZCIlMGFiYmZmZTZjZDg0MzFlYWJjMzY2MTk4MGE2ZTI4%0AMDkiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh%0Ac2h7BjoLbm90aWNlIiZQcm9kdWN0IHdhcyBzdWNjZXNzZnVsbHkgdXBkYXRl%0AZC4GOgpAdXNlZHsGOwdU--b25f1ce7261ea70aa2b00521371cf7820541c6a7
+  Parameters: {"action"=>"show", "id"=>"1", "controller"=>"products"}
+  [4;36;1mProduct Columns (0.007235)[0m   [0;1mSHOW FIELDS FROM `products`[0m
+  [4;35;1mProduct Load (0.002145)[0m   [0mSELECT * FROM `products` WHERE (`products`.`id` = 1) [0m
+Rendering template within layouts/products
+Rendering products/show
+Completed in 0.03585 (27 reqs/sec) | Rendering: 0.00705 (19%) | DB: 0.00938 (26%) | 200 OK [http://homerj/products/1]
+
+
+Processing ProductsController#index (for 127.0.0.1 at 2008-12-05 15:55:29) [GET]
+  Session ID: BAh7BzoMY3NyZl9pZCIlMGFiYmZmZTZjZDg0MzFlYWJjMzY2MTk4MGE2ZTI4%0AMDkiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh%0Ac2h7AAY6CkB1c2VkewA%3D--17287179f12915c82191ef3b1b066e950b149fd5
+  Parameters: {"action"=>"index", "controller"=>"products"}
+  [4;36;1mProduct Load (0.002187)[0m   [0;1mSELECT * FROM `products` [0m
+Rendering template within layouts/products
+Rendering products/index
+  [4;35;1mProduct Columns (0.005015)[0m   [0mSHOW FIELDS FROM `products`[0m
+Completed in 0.04263 (23 reqs/sec) | Rendering: 0.01096 (25%) | DB: 0.00720 (16%) | 200 OK [http://homerj/products]
+
+
+Processing ProductsController#edit (for 127.0.0.1 at 2008-12-05 15:55:33) [GET]
+  Session ID: BAh7BzoMY3NyZl9pZCIlMGFiYmZmZTZjZDg0MzFlYWJjMzY2MTk4MGE2ZTI4%0AMDkiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh%0Ac2h7AAY6CkB1c2VkewA%3D--17287179f12915c82191ef3b1b066e950b149fd5
+  Parameters: {"action"=>"edit", "id"=>"1", "controller"=>"products"}
+  [4;36;1mProduct Columns (0.007701)[0m   [0;1mSHOW FIELDS FROM `products`[0m
+  [4;35;1mProduct Load (0.012053)[0m   [0mSELECT * FROM `products` WHERE (`products`.`id` = 1) [0m
+Rendering template within layouts/products
+Rendering products/edit
+Completed in 0.04904 (20 reqs/sec) | Rendering: 0.00913 (18%) | DB: 0.01975 (40%) | 200 OK [http://homerj/products/1/edit]
+
+
+Processing ProductsController#update (for 127.0.0.1 at 2008-12-05 15:55:42) [PUT]
+  Session ID: BAh7BzoMY3NyZl9pZCIlMGFiYmZmZTZjZDg0MzFlYWJjMzY2MTk4MGE2ZTI4%0AMDkiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh%0Ac2h7AAY6CkB1c2VkewA%3D--17287179f12915c82191ef3b1b066e950b149fd5
+  Parameters: {"commit"=>"Update", "product"=>{"image_url"=>"/fiat.jpg", "title"=>"Fiat 131", "price"=>"0.0", "description"=>"Fiat 131 Abarth"}, "authenticity_token"=>"50bc61c040366f8308d9f6e7f5b8537c2421cb12", "_method"=>"put", "action"=>"update", "id"=>"1", "controller"=>"products"}
+  [4;36;1mProduct Columns (0.007569)[0m   [0;1mSHOW FIELDS FROM `products`[0m
+  [4;35;1mProduct Load (0.002285)[0m   [0mSELECT * FROM `products` WHERE (`products`.`id` = 1) [0m
+  [4;36;1mSQL (0.023993)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.000692)[0m   [0mCOMMIT[0m
+Rendering template within layouts/products
+Rendering products/edit
+Completed in 0.06790 (14 reqs/sec) | Rendering: 0.00701 (10%) | DB: 0.03454 (50%) | 200 OK [http://homerj/products/1]
+
+
+Processing ProductsController#update (for 127.0.0.1 at 2008-12-05 15:55:49) [PUT]
+  Session ID: BAh7BzoMY3NyZl9pZCIlMGFiYmZmZTZjZDg0MzFlYWJjMzY2MTk4MGE2ZTI4%0AMDkiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh%0Ac2h7AAY6CkB1c2VkewA%3D--17287179f12915c82191ef3b1b066e950b149fd5
+  Parameters: {"commit"=>"Update", "product"=>{"image_url"=>"/fiat.jpg", "title"=>"Fiat 131", "price"=>"2222", "description"=>"Fiat 131 Abarth"}, "authenticity_token"=>"50bc61c040366f8308d9f6e7f5b8537c2421cb12", "_method"=>"put", "action"=>"update", "id"=>"1", "controller"=>"products"}
+  [4;36;1mProduct Columns (0.003967)[0m   [0;1mSHOW FIELDS FROM `products`[0m
+  [4;35;1mProduct Load (0.025686)[0m   [0mSELECT * FROM `products` WHERE (`products`.`id` = 1) [0m
+  [4;36;1mSQL (0.000837)[0m   [0;1mBEGIN[0m
+  [4;35;1mProduct Update (0.001711)[0m   [0mUPDATE `products` SET `created_at` = '2008-12-04 22:33:36', `title` = 'Fiat 131', `price` = '2222.0', `description` = 'Fiat 131 Abarth', `updated_at` = '2008-12-05 15:55:49', `image_url` = '/fiat.jpg' WHERE `id` = 1[0m
+  [4;36;1mSQL (0.008983)[0m   [0;1mCOMMIT[0m
+Redirected to http://homerj:3001/products/1
+Completed in 0.07607 (13 reqs/sec) | DB: 0.04118 (54%) | 302 Found [http://homerj/products/1]
+
+
+Processing ProductsController#show (for 127.0.0.1 at 2008-12-05 15:55:49) [GET]
+  Session ID: BAh7BzoMY3NyZl9pZCIlMGFiYmZmZTZjZDg0MzFlYWJjMzY2MTk4MGE2ZTI4%0AMDkiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh%0Ac2h7BjoLbm90aWNlIiZQcm9kdWN0IHdhcyBzdWNjZXNzZnVsbHkgdXBkYXRl%0AZC4GOgpAdXNlZHsGOwdU--b25f1ce7261ea70aa2b00521371cf7820541c6a7
+  Parameters: {"action"=>"show", "id"=>"1", "controller"=>"products"}
+  [4;35;1mProduct Columns (0.005567)[0m   [0mSHOW FIELDS FROM `products`[0m
+  [4;36;1mProduct Load (0.005981)[0m   [0;1mSELECT * FROM `products` WHERE (`products`.`id` = 1) [0m
+Rendering template within layouts/products
+Rendering products/show
+Completed in 0.03683 (27 reqs/sec) | Rendering: 0.00573 (15%) | DB: 0.01155 (31%) | 200 OK [http://homerj/products/1]
+
+
+Processing ProductsController#index (for 127.0.0.1 at 2008-12-05 15:55:52) [GET]
+  Session ID: BAh7BzoMY3NyZl9pZCIlMGFiYmZmZTZjZDg0MzFlYWJjMzY2MTk4MGE2ZTI4%0AMDkiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh%0Ac2h7AAY6CkB1c2VkewA%3D--17287179f12915c82191ef3b1b066e950b149fd5
+  Parameters: {"action"=>"index", "controller"=>"products"}
+  [4;35;1mProduct Load (0.005535)[0m   [0mSELECT * FROM `products` [0m
+Rendering template within layouts/products
+Rendering products/index
+  [4;36;1mProduct Columns (0.019052)[0m   [0;1mSHOW FIELDS FROM `products`[0m
+Completed in 0.18286 (5 reqs/sec) | Rendering: 0.00868 (4%) | DB: 0.02459 (13%) | 200 OK [http://homerj/products]
+
+
+Processing ProductsController#index (for 127.0.0.1 at 2008-12-05 16:12:07) [GET]
+  Session ID: BAh7BzoMY3NyZl9pZCIlMGFiYmZmZTZjZDg0MzFlYWJjMzY2MTk4MGE2ZTI4%0AMDkiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh%0Ac2h7AAY6CkB1c2VkewA%3D--17287179f12915c82191ef3b1b066e950b149fd5
+  Parameters: {"action"=>"index", "controller"=>"products"}
+
+
+SyntaxError (/pub/CODE/ruby/depot/app/models/product.rb:4: unmatched ): /\.gif|jpg|png)$/):
+    /usr/lib/ruby/gems/1.8/gems/activesupport-2.0.2/lib/active_support/dependencies.rb:203:in `load_without_new_constant_marking'
+    /usr/lib/ruby/gems/1.8/gems/activesupport-2.0.2/lib/active_support/dependencies.rb:203:in `load_file'
+    /usr/lib/ruby/gems/1.8/gems/activesupport-2.0.2/lib/active_support/dependencies.rb:342:in `new_constants_in'
+    /usr/lib/ruby/gems/1.8/gems/activesupport-2.0.2/lib/active_support/dependencies.rb:202:in `load_file'
+    /usr/lib/ruby/gems/1.8/gems/activesupport-2.0.2/lib/active_support/dependencies.rb:94:in `require_or_load'
+    /usr/lib/ruby/gems/1.8/gems/activesupport-2.0.2/lib/active_support/dependencies.rb:248:in `load_missing_constant'
+    /usr/lib/ruby/gems/1.8/gems/activesupport-2.0.2/lib/active_support/dependencies.rb:453:in `const_missing'
+    /usr/lib/ruby/gems/1.8/gems/activesupport-2.0.2/lib/active_support/dependencies.rb:465:in `const_missing'
+    /usr/lib/ruby/gems/1.8/gems/activesupport-2.0.2/lib/active_support/dependencies.rb:260:in `load_missing_constant'
+    /usr/lib/ruby/gems/1.8/gems/activesupport-2.0.2/lib/active_support/dependencies.rb:469:in `const_missing'
+    /app/controllers/products_controller.rb:5:in `index'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/base.rb:1158:in `send'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/base.rb:1158:in `perform_action_without_filters'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/filters.rb:697:in `call_filters'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/filters.rb:689:in `perform_action_without_benchmark'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    /usr/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/rescue.rb:199:in `perform_action_without_caching'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/caching.rb:678:in `perform_action'
+    /usr/lib/ruby/gems/1.8/gems/activerecord-2.0.2/lib/active_record/connection_adapters/abstract/query_cache.rb:33:in `cache'
+    /usr/lib/ruby/gems/1.8/gems/activerecord-2.0.2/lib/active_record/query_cache.rb:8:in `cache'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/caching.rb:677:in `perform_action'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/base.rb:524:in `send'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/base.rb:524:in `process_without_filters'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/filters.rb:685:in `process_without_session_management_support'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/session_management.rb:123:in `process'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/base.rb:388:in `process'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/dispatcher.rb:171:in `handle_request'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/dispatcher.rb:115:in `dispatch'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/dispatcher.rb:126:in `dispatch_cgi'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/dispatcher.rb:9:in `dispatch'
+    /usr/lib/ruby/gems/1.8/gems/rails-2.0.2/lib/webrick_server.rb:112:in `handle_dispatch'
+    /usr/lib/ruby/gems/1.8/gems/rails-2.0.2/lib/webrick_server.rb:78:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+    /usr/lib/ruby/gems/1.8/gems/rails-2.0.2/lib/webrick_server.rb:62:in `dispatch'
+    /usr/lib/ruby/gems/1.8/gems/rails-2.0.2/lib/commands/servers/webrick.rb:66
+    /usr/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:27:in `gem_original_require'
+    /usr/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:27:in `require'
+    /usr/lib/ruby/gems/1.8/gems/activesupport-2.0.2/lib/active_support/dependencies.rb:496:in `require'
+    /usr/lib/ruby/gems/1.8/gems/activesupport-2.0.2/lib/active_support/dependencies.rb:342:in `new_constants_in'
+    /usr/lib/ruby/gems/1.8/gems/activesupport-2.0.2/lib/active_support/dependencies.rb:496:in `require'
+    /usr/lib/ruby/gems/1.8/gems/rails-2.0.2/lib/commands/server.rb:39
+    /usr/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:27:in `gem_original_require'
+    /usr/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:27:in `require'
+    script/server:3
+
+Rendering /usr/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/templates/rescues/layout.erb (internal_server_error)
+
+
+Processing ProductsController#index (for 127.0.0.1 at 2008-12-05 16:12:56) [GET]
+  Session ID: BAh7BzoMY3NyZl9pZCIlMGFiYmZmZTZjZDg0MzFlYWJjMzY2MTk4MGE2ZTI4%0AMDkiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh%0Ac2h7AAY6CkB1c2VkewA%3D--17287179f12915c82191ef3b1b066e950b149fd5
+  Parameters: {"action"=>"index", "controller"=>"products"}
+  [4;35;1mProduct Load (0.011363)[0m   [0mSELECT * FROM `products` [0m
+Rendering template within layouts/products
+Rendering products/index
+  [4;36;1mProduct Columns (0.003434)[0m   [0;1mSHOW FIELDS FROM `products`[0m
+Completed in 0.05539 (18 reqs/sec) | Rendering: 0.00900 (16%) | DB: 0.01480 (26%) | 200 OK [http://homerj/products]
+
+
+Processing ProductsController#new (for 127.0.0.1 at 2008-12-05 16:13:00) [GET]
+  Session ID: BAh7BzoMY3NyZl9pZCIlMGFiYmZmZTZjZDg0MzFlYWJjMzY2MTk4MGE2ZTI4%0AMDkiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh%0Ac2h7AAY6CkB1c2VkewA%3D--17287179f12915c82191ef3b1b066e950b149fd5
+  Parameters: {"action"=>"new", "controller"=>"products"}
+  [4;35;1mProduct Columns (0.004126)[0m   [0mSHOW FIELDS FROM `products`[0m
+Rendering template within layouts/products
+Rendering products/new
+Completed in 0.03435 (29 reqs/sec) | Rendering: 0.01187 (34%) | DB: 0.00413 (12%) | 200 OK [http://homerj/products/new]
+
+
+Processing ProductsController#create (for 127.0.0.1 at 2008-12-05 16:13:23) [POST]
+  Session ID: BAh7BzoMY3NyZl9pZCIlMGFiYmZmZTZjZDg0MzFlYWJjMzY2MTk4MGE2ZTI4%0AMDkiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh%0Ac2h7AAY6CkB1c2VkewA%3D--17287179f12915c82191ef3b1b066e950b149fd5
+  Parameters: {"commit"=>"Create", "product"=>{"image_url"=>"delta", "title"=>"Lancia ", "price"=>"1000", "description"=>"Delta"}, "authenticity_token"=>"50bc61c040366f8308d9f6e7f5b8537c2421cb12", "action"=>"create", "controller"=>"products"}
+  [4;36;1mProduct Columns (0.004863)[0m   [0;1mSHOW FIELDS FROM `products`[0m
+  [4;35;1mSQL (0.001170)[0m   [0mBEGIN[0m
+  [4;36;1mProduct Load (0.016503)[0m   [0;1mSELECT * FROM `products` WHERE (products.title = 'Lancia ') LIMIT 1[0m
+  [4;35;1mSQL (0.001843)[0m   [0mCOMMIT[0m
+Rendering template within layouts/products
+Rendering products/new
+Completed in 0.05874 (17 reqs/sec) | Rendering: 0.00638 (10%) | DB: 0.02438 (41%) | 200 OK [http://homerj/products]
+
+
+Processing ProductsController#create (for 127.0.0.1 at 2008-12-05 16:13:32) [POST]
+  Session ID: BAh7BzoMY3NyZl9pZCIlMGFiYmZmZTZjZDg0MzFlYWJjMzY2MTk4MGE2ZTI4%0AMDkiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh%0Ac2h7AAY6CkB1c2VkewA%3D--17287179f12915c82191ef3b1b066e950b149fd5
+  Parameters: {"commit"=>"Create", "product"=>{"image_url"=>"delta.PNG", "title"=>"Lancia ", "price"=>"1000", "description"=>"Delta"}, "authenticity_token"=>"50bc61c040366f8308d9f6e7f5b8537c2421cb12", "action"=>"create", "controller"=>"products"}
+  [4;36;1mProduct Columns (0.004377)[0m   [0;1mSHOW FIELDS FROM `products`[0m
+  [4;35;1mSQL (0.003116)[0m   [0mBEGIN[0m
+  [4;36;1mProduct Load (0.002632)[0m   [0;1mSELECT * FROM `products` WHERE (products.title = 'Lancia ') LIMIT 1[0m
+  [4;35;1mProduct Create (0.000585)[0m   [0mINSERT INTO `products` (`image_url`, `updated_at`, `price`, `title`, `description`, `created_at`) VALUES('delta.PNG', '2008-12-05 16:13:32', '1000.0', 'Lancia ', 'Delta', '2008-12-05 16:13:32')[0m
+  [4;36;1mSQL (0.016586)[0m   [0;1mCOMMIT[0m
+Redirected to http://homerj:3001/products/4
+Completed in 0.05718 (17 reqs/sec) | DB: 0.02730 (47%) | 302 Found [http://homerj/products]
+
+
+Processing ProductsController#show (for 127.0.0.1 at 2008-12-05 16:13:32) [GET]
+  Session ID: BAh7BzoMY3NyZl9pZCIlMGFiYmZmZTZjZDg0MzFlYWJjMzY2MTk4MGE2ZTI4%0AMDkiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh%0Ac2h7BjoLbm90aWNlIiZQcm9kdWN0IHdhcyBzdWNjZXNzZnVsbHkgY3JlYXRl%0AZC4GOgpAdXNlZHsGOwdU--a38172a41a4eac403a8e14c363294bb3232caf62
+  Parameters: {"action"=>"show", "id"=>"4", "controller"=>"products"}
+  [4;35;1mProduct Columns (0.011722)[0m   [0mSHOW FIELDS FROM `products`[0m
+  [4;36;1mProduct Load (0.002272)[0m   [0;1mSELECT * FROM `products` WHERE (`products`.`id` = 4) [0m
+Rendering template within layouts/products
+Rendering products/show
+Completed in 0.04280 (23 reqs/sec) | Rendering: 0.00693 (16%) | DB: 0.01399 (32%) | 200 OK [http://homerj/products/4]
+
+
+Processing ProductsController#index (for 127.0.0.1 at 2008-12-05 16:13:35) [GET]
+  Session ID: BAh7BzoMY3NyZl9pZCIlMGFiYmZmZTZjZDg0MzFlYWJjMzY2MTk4MGE2ZTI4%0AMDkiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh%0Ac2h7AAY6CkB1c2VkewA%3D--17287179f12915c82191ef3b1b066e950b149fd5
+  Parameters: {"action"=>"index", "controller"=>"products"}
+  [4;35;1mProduct Load (0.004330)[0m   [0mSELECT * FROM `products` [0m
+Rendering template within layouts/products
+Rendering products/index
+  [4;36;1mProduct Columns (0.003045)[0m   [0;1mSHOW FIELDS FROM `products`[0m
+Completed in 0.03592 (27 reqs/sec) | Rendering: 0.00948 (26%) | DB: 0.00738 (20%) | 200 OK [http://homerj/products]
+
+
+Processing ProductsController#edit (for 127.0.0.1 at 2008-12-05 16:13:39) [GET]
+  Session ID: BAh7BzoMY3NyZl9pZCIlMGFiYmZmZTZjZDg0MzFlYWJjMzY2MTk4MGE2ZTI4%0AMDkiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh%0Ac2h7AAY6CkB1c2VkewA%3D--17287179f12915c82191ef3b1b066e950b149fd5
+  Parameters: {"action"=>"edit", "id"=>"4", "controller"=>"products"}
+  [4;35;1mProduct Columns (0.006305)[0m   [0mSHOW FIELDS FROM `products`[0m
+  [4;36;1mProduct Load (0.002173)[0m   [0;1mSELECT * FROM `products` WHERE (`products`.`id` = 4) [0m
+Rendering template within layouts/products
+Rendering products/edit
+Completed in 0.03598 (27 reqs/sec) | Rendering: 0.00886 (24%) | DB: 0.00848 (23%) | 200 OK [http://homerj/products/4/edit]
+
+
+Processing ProductsController#update (for 127.0.0.1 at 2008-12-05 16:13:44) [PUT]
+  Session ID: BAh7BzoMY3NyZl9pZCIlMGFiYmZmZTZjZDg0MzFlYWJjMzY2MTk4MGE2ZTI4%0AMDkiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh%0Ac2h7AAY6CkB1c2VkewA%3D--17287179f12915c82191ef3b1b066e950b149fd5
+  Parameters: {"commit"=>"Update", "product"=>{"image_url"=>"/delta.PNG", "title"=>"Lancia ", "price"=>"1000.00", "description"=>"Delta"}, "authenticity_token"=>"50bc61c040366f8308d9f6e7f5b8537c2421cb12", "_method"=>"put", "action"=>"update", "id"=>"4", "controller"=>"products"}
+  [4;35;1mProduct Columns (0.006574)[0m   [0mSHOW FIELDS FROM `products`[0m
+  [4;36;1mProduct Load (0.011114)[0m   [0;1mSELECT * FROM `products` WHERE (`products`.`id` = 4) [0m
+  [4;35;1mSQL (0.010094)[0m   [0mBEGIN[0m
+  [4;36;1mProduct Load (0.026238)[0m   [0;1mSELECT * FROM `products` WHERE (products.title = 'Lancia ' AND products.id <> 4) LIMIT 1[0m
+  [4;35;1mProduct Update (0.001982)[0m   [0mUPDATE `products` SET `created_at` = '2008-12-05 16:13:32', `title` = 'Lancia ', `price` = '1000.0', `description` = 'Delta', `updated_at` = '2008-12-05 16:13:45', `image_url` = '/delta.PNG' WHERE `id` = 4[0m
+  [4;36;1mSQL (0.012152)[0m   [0;1mCOMMIT[0m
+Redirected to http://homerj:3001/products/4
+Completed in 0.10114 (9 reqs/sec) | DB: 0.06815 (67%) | 302 Found [http://homerj/products/4]
+
+
+Processing ProductsController#show (for 127.0.0.1 at 2008-12-05 16:13:45) [GET]
+  Session ID: BAh7BzoMY3NyZl9pZCIlMGFiYmZmZTZjZDg0MzFlYWJjMzY2MTk4MGE2ZTI4%0AMDkiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh%0Ac2h7BjoLbm90aWNlIiZQcm9kdWN0IHdhcyBzdWNjZXNzZnVsbHkgdXBkYXRl%0AZC4GOgpAdXNlZHsGOwdU--b25f1ce7261ea70aa2b00521371cf7820541c6a7
+  Parameters: {"action"=>"show", "id"=>"4", "controller"=>"products"}
+  [4;35;1mProduct Columns (0.005855)[0m   [0mSHOW FIELDS FROM `products`[0m
+  [4;36;1mProduct Load (0.008486)[0m   [0;1mSELECT * FROM `products` WHERE (`products`.`id` = 4) [0m
+Rendering template within layouts/products
+Rendering products/show
+Completed in 0.04429 (22 reqs/sec) | Rendering: 0.00563 (12%) | DB: 0.01434 (32%) | 200 OK [http://homerj/products/4]
+
+
+Processing ProductsController#edit (for 127.0.0.1 at 2008-12-05 16:13:48) [GET]
+  Session ID: BAh7BzoMY3NyZl9pZCIlMGFiYmZmZTZjZDg0MzFlYWJjMzY2MTk4MGE2ZTI4%0AMDkiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh%0Ac2h7AAY6CkB1c2VkewA%3D--17287179f12915c82191ef3b1b066e950b149fd5
+  Parameters: {"action"=>"edit", "id"=>"4", "controller"=>"products"}
+  [4;35;1mProduct Columns (0.004550)[0m   [0mSHOW FIELDS FROM `products`[0m
+  [4;36;1mProduct Load (0.003005)[0m   [0;1mSELECT * FROM `products` WHERE (`products`.`id` = 4) [0m
+Rendering template within layouts/products
+Rendering products/edit
+Completed in 0.06630 (15 reqs/sec) | Rendering: 0.01186 (17%) | DB: 0.00755 (11%) | 200 OK [http://homerj/products/4/edit]
+
+
+Processing ProductsController#update (for 127.0.0.1 at 2008-12-05 16:13:59) [PUT]
+  Session ID: BAh7BzoMY3NyZl9pZCIlMGFiYmZmZTZjZDg0MzFlYWJjMzY2MTk4MGE2ZTI4%0AMDkiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh%0Ac2h7AAY6CkB1c2VkewA%3D--17287179f12915c82191ef3b1b066e950b149fd5
+  Parameters: {"commit"=>"Update", "product"=>{"image_url"=>"/images/delta.PNG", "title"=>"Lancia ", "price"=>"1000.00", "description"=>"Delta"}, "authenticity_token"=>"50bc61c040366f8308d9f6e7f5b8537c2421cb12", "_method"=>"put", "action"=>"update", "id"=>"4", "controller"=>"products"}
+  [4;35;1mProduct Columns (0.004081)[0m   [0mSHOW FIELDS FROM `products`[0m
+  [4;36;1mProduct Load (0.002188)[0m   [0;1mSELECT * FROM `products` WHERE (`products`.`id` = 4) [0m
+  [4;35;1mSQL (0.000434)[0m   [0mBEGIN[0m
+  [4;36;1mProduct Load (0.002174)[0m   [0;1mSELECT * FROM `products` WHERE (products.title = 'Lancia ' AND products.id <> 4) LIMIT 1[0m
+  [4;35;1mProduct Update (0.002238)[0m   [0mUPDATE `products` SET `created_at` = '2008-12-05 16:13:32', `title` = 'Lancia ', `price` = '1000.0', `description` = 'Delta', `updated_at` = '2008-12-05 16:13:59', `image_url` = '/images/delta.PNG' WHERE `id` = 4[0m
+  [4;36;1mSQL (0.019315)[0m   [0;1mCOMMIT[0m
+Redirected to http://homerj:3001/products/4
+Completed in 0.06497 (15 reqs/sec) | DB: 0.03043 (46%) | 302 Found [http://homerj/products/4]
+
+
+Processing ProductsController#show (for 127.0.0.1 at 2008-12-05 16:13:59) [GET]
+  Session ID: BAh7BzoMY3NyZl9pZCIlMGFiYmZmZTZjZDg0MzFlYWJjMzY2MTk4MGE2ZTI4%0AMDkiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh%0Ac2h7BjoLbm90aWNlIiZQcm9kdWN0IHdhcyBzdWNjZXNzZnVsbHkgdXBkYXRl%0AZC4GOgpAdXNlZHsGOwdU--b25f1ce7261ea70aa2b00521371cf7820541c6a7
+  Parameters: {"action"=>"show", "id"=>"4", "controller"=>"products"}
+  [4;35;1mProduct Columns (0.007204)[0m   [0mSHOW FIELDS FROM `products`[0m
+  [4;36;1mProduct Load (0.003945)[0m   [0;1mSELECT * FROM `products` WHERE (`products`.`id` = 4) [0m
+Rendering template within layouts/products
+Rendering products/show
+Completed in 0.03649 (27 reqs/sec) | Rendering: 0.00603 (16%) | DB: 0.01115 (30%) | 200 OK [http://homerj/products/4]
+
+
+Processing ProductsController#index (for 127.0.0.1 at 2008-12-05 16:14:01) [GET]
+  Session ID: BAh7BzoMY3NyZl9pZCIlMGFiYmZmZTZjZDg0MzFlYWJjMzY2MTk4MGE2ZTI4%0AMDkiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh%0Ac2h7AAY6CkB1c2VkewA%3D--17287179f12915c82191ef3b1b066e950b149fd5
+  Parameters: {"action"=>"index", "controller"=>"products"}
+  [4;35;1mProduct Load (0.004364)[0m   [0mSELECT * FROM `products` [0m
+Rendering template within layouts/products
+Rendering products/index
+  [4;36;1mProduct Columns (0.007237)[0m   [0;1mSHOW FIELDS FROM `products`[0m
+Completed in 0.05073 (19 reqs/sec) | Rendering: 0.01081 (21%) | DB: 0.01160 (22%) | 200 OK [http://homerj/products]
+WARNING: You're using the Ruby-based MySQL library that ships with Rails. This library is not suited for production. Please install the C-based MySQL library instead (gem install mysql).
+  [4;36;1mSQL (0.000242)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (0.000000)[0m   [0mMysql::Error: #42S01Table 'schema_info' already exists: CREATE TABLE `schema_info` (version int(11))[0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mMysql::Error: #42S01Table 'schema_info' already exists: CREATE TABLE `schema_info` (version int(11))[0m
+  [4;35;1mSQL (0.000505)[0m   [0mSELECT version FROM schema_info[0m
+  [4;36;1mSQL (0.000365)[0m   [0;1mSELECT version FROM schema_info[0m
+  [4;35;1mSQL (0.000453)[0m   [0mSELECT version FROM schema_info[0m
+Migrating to AddTestData (3)
+  [4;36;1mProduct Delete all (0.001870)[0m   [0;1mDELETE FROM `products` [0m
+  [4;35;1mProduct Columns (0.001726)[0m   [0mSHOW FIELDS FROM `products`[0m
+  [4;36;1mSQL (0.000255)[0m   [0;1mBEGIN[0m
+  [4;35;1mProduct Load (0.002800)[0m   [0mSELECT * FROM `products` WHERE (products.title = 'Fiat 131') LIMIT 1[0m
+  [4;36;1mProduct Create (0.000416)[0m   [0;1mINSERT INTO `products` (`image_url`, `updated_at`, `price`, `title`, `description`, `created_at`) VALUES('images/fiat-131.jpg', '2008-12-05 17:00:33', '2500.0', 'Fiat 131', 'Abarth Tuned', '2008-12-05 17:00:33')[0m
+  [4;35;1mSQL (0.000577)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.000194)[0m   [0;1mBEGIN[0m
+  [4;35;1mProduct Load (0.000927)[0m   [0mSELECT * FROM `products` WHERE (products.title = 'Renault R5') LIMIT 1[0m
+  [4;36;1mProduct Create (0.000341)[0m   [0;1mINSERT INTO `products` (`image_url`, `updated_at`, `price`, `title`, `description`, `created_at`) VALUES('images/R5-Turbo.jpg', '2008-12-05 17:00:33', '5500.0', 'Renault R5', 'Turbo', '2008-12-05 17:00:33')[0m
+  [4;35;1mSQL (0.000591)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.000346)[0m   [0;1mUPDATE schema_info SET version = 3[0m
+  [4;35;1mSQL (0.000421)[0m   [0mSELECT * FROM schema_info[0m
+  [4;36;1mSQL (0.000496)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.001641)[0m   [0mSHOW FIELDS FROM `products`[0m
+  [4;36;1mSQL (0.001623)[0m   [0;1mdescribe `products`[0m
+  [4;35;1mSQL (0.001446)[0m   [0mSHOW KEYS FROM `products`[0m
+
+
+Processing ProductsController#index (for 127.0.0.1 at 2008-12-05 17:00:43) [GET]
+  Session ID: BAh7BzoMY3NyZl9pZCIlMGFiYmZmZTZjZDg0MzFlYWJjMzY2MTk4MGE2ZTI4%0AMDkiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh%0Ac2h7AAY6CkB1c2VkewA%3D--17287179f12915c82191ef3b1b066e950b149fd5
+  Parameters: {"action"=>"index", "controller"=>"products"}
+  [4;35;1mProduct Load (0.004512)[0m   [0mSELECT * FROM `products` [0m
+Rendering template within layouts/products
+Rendering products/index
+  [4;36;1mProduct Columns (0.003550)[0m   [0;1mSHOW FIELDS FROM `products`[0m
+Completed in 0.06560 (15 reqs/sec) | Rendering: 0.01127 (17%) | DB: 0.00806 (12%) | 200 OK [http://homerj/products]
+
+
+Processing ProductsController#show (for 127.0.0.1 at 2008-12-05 17:00:51) [GET]
+  Session ID: BAh7BzoMY3NyZl9pZCIlMGFiYmZmZTZjZDg0MzFlYWJjMzY2MTk4MGE2ZTI4%0AMDkiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh%0Ac2h7AAY6CkB1c2VkewA%3D--17287179f12915c82191ef3b1b066e950b149fd5
+  Parameters: {"action"=>"show", "id"=>"5", "controller"=>"products"}
+  [4;35;1mProduct Columns (0.012751)[0m   [0mSHOW FIELDS FROM `products`[0m
+  [4;36;1mProduct Load (0.001924)[0m   [0;1mSELECT * FROM `products` WHERE (`products`.`id` = 5) [0m
+Rendering template within layouts/products
+Rendering products/show
+Completed in 0.03873 (25 reqs/sec) | Rendering: 0.00580 (14%) | DB: 0.01467 (37%) | 200 OK [http://homerj/products/5]
+
+
+Processing ProductsController#index (for 127.0.0.1 at 2008-12-05 17:01:00) [GET]
+  Session ID: BAh7BzoMY3NyZl9pZCIlMGFiYmZmZTZjZDg0MzFlYWJjMzY2MTk4MGE2ZTI4%0AMDkiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh%0Ac2h7AAY6CkB1c2VkewA%3D--17287179f12915c82191ef3b1b066e950b149fd5
+  Parameters: {"action"=>"index", "controller"=>"products"}
+  [4;35;1mProduct Load (0.002432)[0m   [0mSELECT * FROM `products` [0m
+Rendering template within layouts/products
+Rendering products/index
+  [4;36;1mProduct Columns (0.011365)[0m   [0;1mSHOW FIELDS FROM `products`[0m
+Completed in 0.04560 (21 reqs/sec) | Rendering: 0.00879 (19%) | DB: 0.01380 (30%) | 200 OK [http://homerj/products]
+
+
+Processing ProductsController#index (for 127.0.0.1 at 2008-12-05 18:12:24) [GET]
+  Session ID: BAh7BzoMY3NyZl9pZCIlMGFiYmZmZTZjZDg0MzFlYWJjMzY2MTk4MGE2ZTI4%0AMDkiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh%0Ac2h7AAY6CkB1c2VkewA%3D--17287179f12915c82191ef3b1b066e950b149fd5
+  Parameters: {"action"=>"index", "controller"=>"products"}
+  [4;35;1mProduct Load (0.002208)[0m   [0mSELECT * FROM `products` [0m
+Rendering template within layouts/products
+Rendering products/index
+  [4;36;1mProduct Columns (0.006346)[0m   [0;1mSHOW FIELDS FROM `products`[0m
+Completed in 0.05545 (18 reqs/sec) | Rendering: 0.02658 (47%) | DB: 0.00855 (15%) | 200 OK [http://homerj/products]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2008-12-05 18:12:25) [GET]
+  Session ID: BAh7BzoMY3NyZl9pZCIlMGFiYmZmZTZjZDg0MzFlYWJjMzY2MTk4MGE2ZTI4%0AMDkiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh%0Ac2h7AAY6CkB1c2VkewA%3D--17287179f12915c82191ef3b1b066e950b149fd5
+  Parameters: {}
+
+
+ActionController::RoutingError (No route matches "/images/images/fiat-131.jpg" with {:method=>:get}):
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/routing.rb:1441:in `recognize_path'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/routing.rb:1424:in `recognize'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/dispatcher.rb:170:in `handle_request'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/dispatcher.rb:115:in `dispatch'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/dispatcher.rb:126:in `dispatch_cgi'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/dispatcher.rb:9:in `dispatch'
+    /usr/lib/ruby/gems/1.8/gems/rails-2.0.2/lib/webrick_server.rb:112:in `handle_dispatch'
+    /usr/lib/ruby/gems/1.8/gems/rails-2.0.2/lib/webrick_server.rb:78:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+    /usr/lib/ruby/gems/1.8/gems/rails-2.0.2/lib/webrick_server.rb:62:in `dispatch'
+    /usr/lib/ruby/gems/1.8/gems/rails-2.0.2/lib/commands/servers/webrick.rb:66
+    /usr/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:27:in `gem_original_require'
+    /usr/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:27:in `require'
+    /usr/lib/ruby/gems/1.8/gems/activesupport-2.0.2/lib/active_support/dependencies.rb:496:in `require'
+    /usr/lib/ruby/gems/1.8/gems/activesupport-2.0.2/lib/active_support/dependencies.rb:342:in `new_constants_in'
+    /usr/lib/ruby/gems/1.8/gems/activesupport-2.0.2/lib/active_support/dependencies.rb:496:in `require'
+    /usr/lib/ruby/gems/1.8/gems/rails-2.0.2/lib/commands/server.rb:39
+    /usr/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:27:in `gem_original_require'
+    /usr/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:27:in `require'
+    script/server:3
+
+Rendering /usr/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/templates/rescues/layout.erb (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2008-12-05 18:12:25) [GET]
+  Session ID: BAh7BzoMY3NyZl9pZCIlMGFiYmZmZTZjZDg0MzFlYWJjMzY2MTk4MGE2ZTI4%0AMDkiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh%0Ac2h7AAY6CkB1c2VkewA%3D--17287179f12915c82191ef3b1b066e950b149fd5
+  Parameters: {}
+
+
+ActionController::RoutingError (No route matches "/images/images/R5-Turbo.jpg" with {:method=>:get}):
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/routing.rb:1441:in `recognize_path'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/routing.rb:1424:in `recognize'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/dispatcher.rb:170:in `handle_request'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/dispatcher.rb:115:in `dispatch'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/dispatcher.rb:126:in `dispatch_cgi'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/dispatcher.rb:9:in `dispatch'
+    /usr/lib/ruby/gems/1.8/gems/rails-2.0.2/lib/webrick_server.rb:112:in `handle_dispatch'
+    /usr/lib/ruby/gems/1.8/gems/rails-2.0.2/lib/webrick_server.rb:78:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+    /usr/lib/ruby/gems/1.8/gems/rails-2.0.2/lib/webrick_server.rb:62:in `dispatch'
+    /usr/lib/ruby/gems/1.8/gems/rails-2.0.2/lib/commands/servers/webrick.rb:66
+    /usr/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:27:in `gem_original_require'
+    /usr/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:27:in `require'
+    /usr/lib/ruby/gems/1.8/gems/activesupport-2.0.2/lib/active_support/dependencies.rb:496:in `require'
+    /usr/lib/ruby/gems/1.8/gems/activesupport-2.0.2/lib/active_support/dependencies.rb:342:in `new_constants_in'
+    /usr/lib/ruby/gems/1.8/gems/activesupport-2.0.2/lib/active_support/dependencies.rb:496:in `require'
+    /usr/lib/ruby/gems/1.8/gems/rails-2.0.2/lib/commands/server.rb:39
+    /usr/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:27:in `gem_original_require'
+    /usr/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:27:in `require'
+    script/server:3
+
+Rendering /usr/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/templates/rescues/layout.erb (not_found)
+
+
+Processing ProductsController#show (for 127.0.0.1 at 2008-12-05 18:12:37) [GET]
+  Session ID: BAh7BzoMY3NyZl9pZCIlMGFiYmZmZTZjZDg0MzFlYWJjMzY2MTk4MGE2ZTI4%0AMDkiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh%0Ac2h7AAY6CkB1c2VkewA%3D--17287179f12915c82191ef3b1b066e950b149fd5
+  Parameters: {"action"=>"show", "id"=>"6", "controller"=>"products"}
+  [4;35;1mProduct Columns (0.003806)[0m   [0mSHOW FIELDS FROM `products`[0m
+  [4;36;1mProduct Load (0.005516)[0m   [0;1mSELECT * FROM `products` WHERE (`products`.`id` = 6) [0m
+Rendering template within layouts/products
+Rendering products/show
+Completed in 0.19605 (5 reqs/sec) | Rendering: 0.00623 (3%) | DB: 0.00932 (4%) | 200 OK [http://homerj/products/6]
+
+
+Processing ProductsController#index (for 127.0.0.1 at 2008-12-05 18:14:28) [GET]
+  Session ID: BAh7BzoMY3NyZl9pZCIlMGFiYmZmZTZjZDg0MzFlYWJjMzY2MTk4MGE2ZTI4%0AMDkiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh%0Ac2h7AAY6CkB1c2VkewA%3D--17287179f12915c82191ef3b1b066e950b149fd5
+  Parameters: {"action"=>"index", "controller"=>"products"}
+  [4;35;1mProduct Load (0.003465)[0m   [0mSELECT * FROM `products` [0m
+Rendering template within layouts/products
+Rendering products/index
+  [4;36;1mProduct Columns (0.006122)[0m   [0;1mSHOW FIELDS FROM `products`[0m
+Completed in 0.07652 (13 reqs/sec) | Rendering: 0.02277 (29%) | DB: 0.00959 (12%) | 200 OK [http://homerj/products]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2008-12-05 18:14:28) [GET]
+  Session ID: BAh7BzoMY3NyZl9pZCIlMGFiYmZmZTZjZDg0MzFlYWJjMzY2MTk4MGE2ZTI4%0AMDkiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh%0Ac2h7AAY6CkB1c2VkewA%3D--17287179f12915c82191ef3b1b066e950b149fd5
+  Parameters: {}
+
+
+ActionController::RoutingError (No route matches "/images/images/fiat-131.jpg" with {:method=>:get}):
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/routing.rb:1441:in `recognize_path'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/routing.rb:1424:in `recognize'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/dispatcher.rb:170:in `handle_request'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/dispatcher.rb:115:in `dispatch'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/dispatcher.rb:126:in `dispatch_cgi'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/dispatcher.rb:9:in `dispatch'
+    /usr/lib/ruby/gems/1.8/gems/rails-2.0.2/lib/webrick_server.rb:112:in `handle_dispatch'
+    /usr/lib/ruby/gems/1.8/gems/rails-2.0.2/lib/webrick_server.rb:78:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+    /usr/lib/ruby/gems/1.8/gems/rails-2.0.2/lib/webrick_server.rb:62:in `dispatch'
+    /usr/lib/ruby/gems/1.8/gems/rails-2.0.2/lib/commands/servers/webrick.rb:66
+    /usr/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:27:in `gem_original_require'
+    /usr/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:27:in `require'
+    /usr/lib/ruby/gems/1.8/gems/activesupport-2.0.2/lib/active_support/dependencies.rb:496:in `require'
+    /usr/lib/ruby/gems/1.8/gems/activesupport-2.0.2/lib/active_support/dependencies.rb:342:in `new_constants_in'
+    /usr/lib/ruby/gems/1.8/gems/activesupport-2.0.2/lib/active_support/dependencies.rb:496:in `require'
+    /usr/lib/ruby/gems/1.8/gems/rails-2.0.2/lib/commands/server.rb:39
+    /usr/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:27:in `gem_original_require'
+    /usr/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:27:in `require'
+    script/server:3
+
+Rendering /usr/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/templates/rescues/layout.erb (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2008-12-05 18:14:28) [GET]
+  Session ID: BAh7BzoMY3NyZl9pZCIlMGFiYmZmZTZjZDg0MzFlYWJjMzY2MTk4MGE2ZTI4%0AMDkiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh%0Ac2h7AAY6CkB1c2VkewA%3D--17287179f12915c82191ef3b1b066e950b149fd5
+  Parameters: {}
+
+
+ActionController::RoutingError (No route matches "/images/images/R5-Turbo.jpg" with {:method=>:get}):
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/routing.rb:1441:in `recognize_path'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/routing.rb:1424:in `recognize'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/dispatcher.rb:170:in `handle_request'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/dispatcher.rb:115:in `dispatch'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/dispatcher.rb:126:in `dispatch_cgi'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/dispatcher.rb:9:in `dispatch'
+    /usr/lib/ruby/gems/1.8/gems/rails-2.0.2/lib/webrick_server.rb:112:in `handle_dispatch'
+    /usr/lib/ruby/gems/1.8/gems/rails-2.0.2/lib/webrick_server.rb:78:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+    /usr/lib/ruby/gems/1.8/gems/rails-2.0.2/lib/webrick_server.rb:62:in `dispatch'
+    /usr/lib/ruby/gems/1.8/gems/rails-2.0.2/lib/commands/servers/webrick.rb:66
+    /usr/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:27:in `gem_original_require'
+    /usr/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:27:in `require'
+    /usr/lib/ruby/gems/1.8/gems/activesupport-2.0.2/lib/active_support/dependencies.rb:496:in `require'
+    /usr/lib/ruby/gems/1.8/gems/activesupport-2.0.2/lib/active_support/dependencies.rb:342:in `new_constants_in'
+    /usr/lib/ruby/gems/1.8/gems/activesupport-2.0.2/lib/active_support/dependencies.rb:496:in `require'
+    /usr/lib/ruby/gems/1.8/gems/rails-2.0.2/lib/commands/server.rb:39
+    /usr/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:27:in `gem_original_require'
+    /usr/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:27:in `require'
+    script/server:3
+
+Rendering /usr/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/templates/rescues/layout.erb (not_found)
+
+
+Processing ProductsController#index (for 127.0.0.1 at 2008-12-05 18:19:59) [GET]
+  Session ID: BAh7BzoMY3NyZl9pZCIlMGFiYmZmZTZjZDg0MzFlYWJjMzY2MTk4MGE2ZTI4%0AMDkiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh%0Ac2h7AAY6CkB1c2VkewA%3D--17287179f12915c82191ef3b1b066e950b149fd5
+  Parameters: {"action"=>"index", "controller"=>"products"}
+  [4;35;1mProduct Load (0.012394)[0m   [0mSELECT * FROM `products` [0m
+Rendering template within layouts/products
+Rendering products/index
+  [4;36;1mProduct Columns (0.003425)[0m   [0;1mSHOW FIELDS FROM `products`[0m
+Completed in 0.04284 (23 reqs/sec) | Rendering: 0.00922 (21%) | DB: 0.01582 (36%) | 200 OK [http://homerj/products]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2008-12-05 18:20:00) [GET]
+  Session ID: BAh7BzoMY3NyZl9pZCIlMGFiYmZmZTZjZDg0MzFlYWJjMzY2MTk4MGE2ZTI4%0AMDkiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh%0Ac2h7AAY6CkB1c2VkewA%3D--17287179f12915c82191ef3b1b066e950b149fd5
+  Parameters: {}
+
+
+ActionController::RoutingError (No route matches "/images/images/fiat-131.jpg" with {:method=>:get}):
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/routing.rb:1441:in `recognize_path'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/routing.rb:1424:in `recognize'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/dispatcher.rb:170:in `handle_request'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/dispatcher.rb:115:in `dispatch'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/dispatcher.rb:126:in `dispatch_cgi'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/dispatcher.rb:9:in `dispatch'
+    /usr/lib/ruby/gems/1.8/gems/rails-2.0.2/lib/webrick_server.rb:112:in `handle_dispatch'
+    /usr/lib/ruby/gems/1.8/gems/rails-2.0.2/lib/webrick_server.rb:78:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+    /usr/lib/ruby/gems/1.8/gems/rails-2.0.2/lib/webrick_server.rb:62:in `dispatch'
+    /usr/lib/ruby/gems/1.8/gems/rails-2.0.2/lib/commands/servers/webrick.rb:66
+    /usr/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:27:in `gem_original_require'
+    /usr/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:27:in `require'
+    /usr/lib/ruby/gems/1.8/gems/activesupport-2.0.2/lib/active_support/dependencies.rb:496:in `require'
+    /usr/lib/ruby/gems/1.8/gems/activesupport-2.0.2/lib/active_support/dependencies.rb:342:in `new_constants_in'
+    /usr/lib/ruby/gems/1.8/gems/activesupport-2.0.2/lib/active_support/dependencies.rb:496:in `require'
+    /usr/lib/ruby/gems/1.8/gems/rails-2.0.2/lib/commands/server.rb:39
+    /usr/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:27:in `gem_original_require'
+    /usr/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:27:in `require'
+    script/server:3
+
+Rendering /usr/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/templates/rescues/layout.erb (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2008-12-05 18:20:00) [GET]
+  Session ID: BAh7BzoMY3NyZl9pZCIlMGFiYmZmZTZjZDg0MzFlYWJjMzY2MTk4MGE2ZTI4%0AMDkiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh%0Ac2h7AAY6CkB1c2VkewA%3D--17287179f12915c82191ef3b1b066e950b149fd5
+  Parameters: {}
+
+
+ActionController::RoutingError (No route matches "/images/images/R5-Turbo.jpg" with {:method=>:get}):
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/routing.rb:1441:in `recognize_path'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/routing.rb:1424:in `recognize'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/dispatcher.rb:170:in `handle_request'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/dispatcher.rb:115:in `dispatch'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/dispatcher.rb:126:in `dispatch_cgi'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/dispatcher.rb:9:in `dispatch'
+    /usr/lib/ruby/gems/1.8/gems/rails-2.0.2/lib/webrick_server.rb:112:in `handle_dispatch'
+    /usr/lib/ruby/gems/1.8/gems/rails-2.0.2/lib/webrick_server.rb:78:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+    /usr/lib/ruby/gems/1.8/gems/rails-2.0.2/lib/webrick_server.rb:62:in `dispatch'
+    /usr/lib/ruby/gems/1.8/gems/rails-2.0.2/lib/commands/servers/webrick.rb:66
+    /usr/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:27:in `gem_original_require'
+    /usr/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:27:in `require'
+    /usr/lib/ruby/gems/1.8/gems/activesupport-2.0.2/lib/active_support/dependencies.rb:496:in `require'
+    /usr/lib/ruby/gems/1.8/gems/activesupport-2.0.2/lib/active_support/dependencies.rb:342:in `new_constants_in'
+    /usr/lib/ruby/gems/1.8/gems/activesupport-2.0.2/lib/active_support/dependencies.rb:496:in `require'
+    /usr/lib/ruby/gems/1.8/gems/rails-2.0.2/lib/commands/server.rb:39
+    /usr/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:27:in `gem_original_require'
+    /usr/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:27:in `require'
+    script/server:3
+
+Rendering /usr/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/templates/rescues/layout.erb (not_found)
+
+
+Processing ProductsController#edit (for 127.0.0.1 at 2008-12-05 18:21:37) [GET]
+  Session ID: BAh7BzoMY3NyZl9pZCIlMGFiYmZmZTZjZDg0MzFlYWJjMzY2MTk4MGE2ZTI4%0AMDkiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh%0Ac2h7AAY6CkB1c2VkewA%3D--17287179f12915c82191ef3b1b066e950b149fd5
+  Parameters: {"action"=>"edit", "id"=>"5", "controller"=>"products"}
+  [4;35;1mProduct Columns (0.008127)[0m   [0mSHOW FIELDS FROM `products`[0m
+  [4;36;1mProduct Load (0.003091)[0m   [0;1mSELECT * FROM `products` WHERE (`products`.`id` = 5) [0m
+Rendering template within layouts/products
+Rendering products/edit
+Completed in 0.03944 (25 reqs/sec) | Rendering: 0.00934 (23%) | DB: 0.01122 (28%) | 200 OK [http://homerj/products/5/edit]
+
+
+Processing ProductsController#update (for 127.0.0.1 at 2008-12-05 18:21:44) [PUT]
+  Session ID: BAh7BzoMY3NyZl9pZCIlMGFiYmZmZTZjZDg0MzFlYWJjMzY2MTk4MGE2ZTI4%0AMDkiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh%0Ac2h7AAY6CkB1c2VkewA%3D--17287179f12915c82191ef3b1b066e950b149fd5
+  Parameters: {"commit"=>"Update", "product"=>{"image_url"=>"fiat-131.jpg", "title"=>"Fiat 131", "price"=>"2500.00", "description"=>"Abarth Tuned"}, "authenticity_token"=>"50bc61c040366f8308d9f6e7f5b8537c2421cb12", "_method"=>"put", "action"=>"update", "id"=>"5", "controller"=>"products"}
+  [4;35;1mProduct Columns (0.026667)[0m   [0mSHOW FIELDS FROM `products`[0m
+  [4;36;1mProduct Load (0.004646)[0m   [0;1mSELECT * FROM `products` WHERE (`products`.`id` = 5) [0m
+  [4;35;1mSQL (0.001141)[0m   [0mBEGIN[0m
+  [4;36;1mProduct Load (0.001824)[0m   [0;1mSELECT * FROM `products` WHERE (products.title = 'Fiat 131' AND products.id <> 5) LIMIT 1[0m
+  [4;35;1mProduct Update (0.000743)[0m   [0mUPDATE `products` SET `created_at` = '2008-12-05 17:00:33', `title` = 'Fiat 131', `price` = '2500.0', `description` = 'Abarth Tuned', `updated_at` = '2008-12-05 18:21:44', `image_url` = 'fiat-131.jpg' WHERE `id` = 5[0m
+  [4;36;1mSQL (0.004663)[0m   [0;1mCOMMIT[0m
+Redirected to http://homerj:3001/products/5
+Completed in 0.06763 (14 reqs/sec) | DB: 0.03968 (58%) | 302 Found [http://homerj/products/5]
+
+
+Processing ProductsController#show (for 127.0.0.1 at 2008-12-05 18:21:44) [GET]
+  Session ID: BAh7BzoMY3NyZl9pZCIlMGFiYmZmZTZjZDg0MzFlYWJjMzY2MTk4MGE2ZTI4%0AMDkiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh%0Ac2h7BjoLbm90aWNlIiZQcm9kdWN0IHdhcyBzdWNjZXNzZnVsbHkgdXBkYXRl%0AZC4GOgpAdXNlZHsGOwdU--b25f1ce7261ea70aa2b00521371cf7820541c6a7
+  Parameters: {"action"=>"show", "id"=>"5", "controller"=>"products"}
+  [4;35;1mProduct Columns (0.007527)[0m   [0mSHOW FIELDS FROM `products`[0m
+  [4;36;1mProduct Load (0.002331)[0m   [0;1mSELECT * FROM `products` WHERE (`products`.`id` = 5) [0m
+Rendering template within layouts/products
+Rendering products/show
+Completed in 0.05156 (19 reqs/sec) | Rendering: 0.00623 (12%) | DB: 0.00986 (19%) | 200 OK [http://homerj/products/5]
+
+
+Processing ProductsController#index (for 127.0.0.1 at 2008-12-05 18:21:46) [GET]
+  Session ID: BAh7BzoMY3NyZl9pZCIlMGFiYmZmZTZjZDg0MzFlYWJjMzY2MTk4MGE2ZTI4%0AMDkiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh%0Ac2h7AAY6CkB1c2VkewA%3D--17287179f12915c82191ef3b1b066e950b149fd5
+  Parameters: {"action"=>"index", "controller"=>"products"}
+  [4;35;1mProduct Load (0.002738)[0m   [0mSELECT * FROM `products` [0m
+Rendering template within layouts/products
+Rendering products/index
+  [4;36;1mProduct Columns (0.003048)[0m   [0;1mSHOW FIELDS FROM `products`[0m
+Completed in 0.03927 (25 reqs/sec) | Rendering: 0.01515 (38%) | DB: 0.00579 (14%) | 200 OK [http://homerj/products]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2008-12-05 18:21:47) [GET]
+  Session ID: BAh7BzoMY3NyZl9pZCIlMGFiYmZmZTZjZDg0MzFlYWJjMzY2MTk4MGE2ZTI4%0AMDkiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh%0Ac2h7AAY6CkB1c2VkewA%3D--17287179f12915c82191ef3b1b066e950b149fd5
+  Parameters: {}
+
+
+ActionController::RoutingError (No route matches "/images/images/R5-Turbo.jpg" with {:method=>:get}):
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/routing.rb:1441:in `recognize_path'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/routing.rb:1424:in `recognize'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/dispatcher.rb:170:in `handle_request'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/dispatcher.rb:115:in `dispatch'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/dispatcher.rb:126:in `dispatch_cgi'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/dispatcher.rb:9:in `dispatch'
+    /usr/lib/ruby/gems/1.8/gems/rails-2.0.2/lib/webrick_server.rb:112:in `handle_dispatch'
+    /usr/lib/ruby/gems/1.8/gems/rails-2.0.2/lib/webrick_server.rb:78:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+    /usr/lib/ruby/gems/1.8/gems/rails-2.0.2/lib/webrick_server.rb:62:in `dispatch'
+    /usr/lib/ruby/gems/1.8/gems/rails-2.0.2/lib/commands/servers/webrick.rb:66
+    /usr/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:27:in `gem_original_require'
+    /usr/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:27:in `require'
+    /usr/lib/ruby/gems/1.8/gems/activesupport-2.0.2/lib/active_support/dependencies.rb:496:in `require'
+    /usr/lib/ruby/gems/1.8/gems/activesupport-2.0.2/lib/active_support/dependencies.rb:342:in `new_constants_in'
+    /usr/lib/ruby/gems/1.8/gems/activesupport-2.0.2/lib/active_support/dependencies.rb:496:in `require'
+    /usr/lib/ruby/gems/1.8/gems/rails-2.0.2/lib/commands/server.rb:39
+    /usr/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:27:in `gem_original_require'
+    /usr/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:27:in `require'
+    script/server:3
+
+Rendering /usr/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/templates/rescues/layout.erb (not_found)
+
+
+Processing ProductsController#edit (for 127.0.0.1 at 2008-12-05 18:21:50) [GET]
+  Session ID: BAh7BzoMY3NyZl9pZCIlMGFiYmZmZTZjZDg0MzFlYWJjMzY2MTk4MGE2ZTI4%0AMDkiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh%0Ac2h7AAY6CkB1c2VkewA%3D--17287179f12915c82191ef3b1b066e950b149fd5
+  Parameters: {"action"=>"edit", "id"=>"6", "controller"=>"products"}
+  [4;35;1mProduct Columns (0.007943)[0m   [0mSHOW FIELDS FROM `products`[0m
+  [4;36;1mProduct Load (0.002461)[0m   [0;1mSELECT * FROM `products` WHERE (`products`.`id` = 6) [0m
+Rendering template within layouts/products
+Rendering products/edit
+Completed in 0.06360 (15 reqs/sec) | Rendering: 0.03390 (53%) | DB: 0.01040 (16%) | 200 OK [http://homerj/products/6/edit]
+
+
+Processing ProductsController#update (for 127.0.0.1 at 2008-12-05 18:21:56) [PUT]
+  Session ID: BAh7BzoMY3NyZl9pZCIlMGFiYmZmZTZjZDg0MzFlYWJjMzY2MTk4MGE2ZTI4%0AMDkiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh%0Ac2h7AAY6CkB1c2VkewA%3D--17287179f12915c82191ef3b1b066e950b149fd5
+  Parameters: {"commit"=>"Update", "product"=>{"image_url"=>"R5-Turbo.jpg", "title"=>"Renault R5", "price"=>"5500.00", "description"=>"Turbo"}, "authenticity_token"=>"50bc61c040366f8308d9f6e7f5b8537c2421cb12", "_method"=>"put", "action"=>"update", "id"=>"6", "controller"=>"products"}
+  [4;35;1mProduct Columns (0.029783)[0m   [0mSHOW FIELDS FROM `products`[0m
+  [4;36;1mProduct Load (0.003758)[0m   [0;1mSELECT * FROM `products` WHERE (`products`.`id` = 6) [0m
+  [4;35;1mSQL (0.001479)[0m   [0mBEGIN[0m
+  [4;36;1mProduct Load (0.004348)[0m   [0;1mSELECT * FROM `products` WHERE (products.title = 'Renault R5' AND products.id <> 6) LIMIT 1[0m
+  [4;35;1mProduct Update (0.000899)[0m   [0mUPDATE `products` SET `created_at` = '2008-12-05 17:00:33', `title` = 'Renault R5', `price` = '5500.0', `description` = 'Turbo', `updated_at` = '2008-12-05 18:21:56', `image_url` = 'R5-Turbo.jpg' WHERE `id` = 6[0m
+  [4;36;1mSQL (0.007230)[0m   [0;1mCOMMIT[0m
+Redirected to http://homerj:3001/products/6
+Completed in 0.08168 (12 reqs/sec) | DB: 0.04750 (58%) | 302 Found [http://homerj/products/6]
+
+
+Processing ProductsController#show (for 127.0.0.1 at 2008-12-05 18:21:56) [GET]
+  Session ID: BAh7BzoMY3NyZl9pZCIlMGFiYmZmZTZjZDg0MzFlYWJjMzY2MTk4MGE2ZTI4%0AMDkiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh%0Ac2h7BjoLbm90aWNlIiZQcm9kdWN0IHdhcyBzdWNjZXNzZnVsbHkgdXBkYXRl%0AZC4GOgpAdXNlZHsGOwdU--b25f1ce7261ea70aa2b00521371cf7820541c6a7
+  Parameters: {"action"=>"show", "id"=>"6", "controller"=>"products"}
+  [4;35;1mProduct Columns (0.027248)[0m   [0mSHOW FIELDS FROM `products`[0m
+  [4;36;1mProduct Load (0.002030)[0m   [0;1mSELECT * FROM `products` WHERE (`products`.`id` = 6) [0m
+Rendering template within layouts/products
+Rendering products/show
+Completed in 0.05377 (18 reqs/sec) | Rendering: 0.00632 (11%) | DB: 0.02928 (54%) | 200 OK [http://homerj/products/6]
+
+
+Processing ProductsController#index (for 127.0.0.1 at 2008-12-05 18:21:58) [GET]
+  Session ID: BAh7BzoMY3NyZl9pZCIlMGFiYmZmZTZjZDg0MzFlYWJjMzY2MTk4MGE2ZTI4%0AMDkiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh%0Ac2h7AAY6CkB1c2VkewA%3D--17287179f12915c82191ef3b1b066e950b149fd5
+  Parameters: {"action"=>"index", "controller"=>"products"}
+  [4;35;1mProduct Load (0.002748)[0m   [0mSELECT * FROM `products` [0m
+Rendering template within layouts/products
+Rendering products/index
+  [4;36;1mProduct Columns (0.010171)[0m   [0;1mSHOW FIELDS FROM `products`[0m
+Completed in 0.04250 (23 reqs/sec) | Rendering: 0.00967 (22%) | DB: 0.01292 (30%) | 200 OK [http://homerj/products]
+
+
+Processing ProductsController#show (for 127.0.0.1 at 2008-12-05 18:27:02) [GET]
+  Session ID: BAh7BzoMY3NyZl9pZCIlMGFiYmZmZTZjZDg0MzFlYWJjMzY2MTk4MGE2ZTI4%0AMDkiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh%0Ac2h7AAY6CkB1c2VkewA%3D--17287179f12915c82191ef3b1b066e950b149fd5
+  Parameters: {"action"=>"show", "id"=>"6", "controller"=>"products"}
+  [4;35;1mProduct Columns (0.004332)[0m   [0mSHOW FIELDS FROM `products`[0m
+  [4;36;1mProduct Load (0.005608)[0m   [0;1mSELECT * FROM `products` WHERE (`products`.`id` = 6) [0m
+Rendering template within layouts/products
+Rendering products/show
+Completed in 0.04077 (24 reqs/sec) | Rendering: 0.00621 (15%) | DB: 0.00994 (24%) | 200 OK [http://homerj/products/6]
+
+
+Processing ProductsController#index (for 127.0.0.1 at 2008-12-05 18:27:08) [GET]
+  Session ID: BAh7BzoMY3NyZl9pZCIlMGFiYmZmZTZjZDg0MzFlYWJjMzY2MTk4MGE2ZTI4%0AMDkiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh%0Ac2h7AAY6CkB1c2VkewA%3D--17287179f12915c82191ef3b1b066e950b149fd5
+  Parameters: {"action"=>"index", "controller"=>"products"}
+  [4;35;1mProduct Load (0.006380)[0m   [0mSELECT * FROM `products` [0m
+Rendering template within layouts/products
+Rendering products/index
+  [4;36;1mProduct Columns (0.013374)[0m   [0;1mSHOW FIELDS FROM `products`[0m
+Completed in 0.05163 (19 reqs/sec) | Rendering: 0.00959 (18%) | DB: 0.01975 (38%) | 200 OK [http://homerj/products]
+
+
+Processing ProductsController#new (for 127.0.0.1 at 2008-12-05 18:33:15) [GET]
+  Session ID: BAh7BzoMY3NyZl9pZCIlMGFiYmZmZTZjZDg0MzFlYWJjMzY2MTk4MGE2ZTI4%0AMDkiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh%0Ac2h7AAY6CkB1c2VkewA%3D--17287179f12915c82191ef3b1b066e950b149fd5
+  Parameters: {"action"=>"new", "controller"=>"products"}
+  [4;35;1mProduct Columns (0.006604)[0m   [0mSHOW FIELDS FROM `products`[0m
+Rendering template within layouts/products
+Rendering products/new
+Completed in 0.03897 (25 reqs/sec) | Rendering: 0.01021 (26%) | DB: 0.00660 (16%) | 200 OK [http://homerj/products/new]
+
+
+Processing ProductsController#create (for 127.0.0.1 at 2008-12-05 18:33:45) [POST]
+  Session ID: BAh7BzoMY3NyZl9pZCIlMGFiYmZmZTZjZDg0MzFlYWJjMzY2MTk4MGE2ZTI4%0AMDkiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh%0Ac2h7AAY6CkB1c2VkewA%3D--17287179f12915c82191ef3b1b066e950b149fd5
+  Parameters: {"commit"=>"Create", "product"=>{"image_url"=>"lancia-037.jpg", "title"=>"Lancia 037", "price"=>"10,000", "description"=>"m"}, "authenticity_token"=>"50bc61c040366f8308d9f6e7f5b8537c2421cb12", "action"=>"create", "controller"=>"products"}
+  [4;36;1mProduct Columns (0.005280)[0m   [0;1mSHOW FIELDS FROM `products`[0m
+  [4;35;1mSQL (0.001273)[0m   [0mBEGIN[0m
+  [4;36;1mProduct Load (0.002617)[0m   [0;1mSELECT * FROM `products` WHERE (products.title = 'Lancia 037') LIMIT 1[0m
+  [4;35;1mSQL (0.003245)[0m   [0mCOMMIT[0m
+Rendering template within layouts/products
+Rendering products/new
+Completed in 0.04654 (21 reqs/sec) | Rendering: 0.00669 (14%) | DB: 0.01242 (26%) | 200 OK [http://homerj/products]
+
+
+Processing ProductsController#create (for 127.0.0.1 at 2008-12-05 18:34:00) [POST]
+  Session ID: BAh7BzoMY3NyZl9pZCIlMGFiYmZmZTZjZDg0MzFlYWJjMzY2MTk4MGE2ZTI4%0AMDkiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh%0Ac2h7AAY6CkB1c2VkewA%3D--17287179f12915c82191ef3b1b066e950b149fd5
+  Parameters: {"commit"=>"Create", "product"=>{"image_url"=>"lancia-037.jpg", "title"=>"Lancia 037", "price"=>"10000", "description"=>"m"}, "authenticity_token"=>"50bc61c040366f8308d9f6e7f5b8537c2421cb12", "action"=>"create", "controller"=>"products"}
+  [4;36;1mProduct Columns (0.003552)[0m   [0;1mSHOW FIELDS FROM `products`[0m
+  [4;35;1mSQL (0.001154)[0m   [0mBEGIN[0m
+  [4;36;1mProduct Load (0.005766)[0m   [0;1mSELECT * FROM `products` WHERE (products.title = 'Lancia 037') LIMIT 1[0m
+  [4;35;1mSQL (0.000608)[0m   [0mCOMMIT[0m
+Rendering template within layouts/products
+Rendering products/new
+Completed in 0.04752 (21 reqs/sec) | Rendering: 0.00947 (19%) | DB: 0.01108 (23%) | 200 OK [http://homerj/products]
+
+
+Processing ProductsController#create (for 127.0.0.1 at 2008-12-05 18:34:42) [POST]
+  Session ID: BAh7BzoMY3NyZl9pZCIlMGFiYmZmZTZjZDg0MzFlYWJjMzY2MTk4MGE2ZTI4%0AMDkiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh%0Ac2h7AAY6CkB1c2VkewA%3D--17287179f12915c82191ef3b1b066e950b149fd5
+  Parameters: {"commit"=>"Create", "product"=>{"image_url"=>"lancia-037.jpg", "title"=>"Lancia 037", "price"=>"10000", "description"=>"m"}, "authenticity_token"=>"50bc61c040366f8308d9f6e7f5b8537c2421cb12", "action"=>"create", "controller"=>"products"}
+  [4;36;1mProduct Columns (0.003977)[0m   [0;1mSHOW FIELDS FROM `products`[0m
+  [4;35;1mSQL (0.003329)[0m   [0mBEGIN[0m
+  [4;36;1mProduct Load (0.002397)[0m   [0;1mSELECT * FROM `products` WHERE (products.title = 'Lancia 037') LIMIT 1[0m
+  [4;35;1mSQL (0.003087)[0m   [0mCOMMIT[0m
+Rendering template within layouts/products
+Rendering products/new
+Completed in 0.07420 (13 reqs/sec) | Rendering: 0.00682 (9%) | DB: 0.01279 (17%) | 200 OK [http://homerj/products]
+
+
+Processing ProductsController#create (for 127.0.0.1 at 2008-12-05 18:35:03) [POST]
+  Session ID: BAh7BzoMY3NyZl9pZCIlMGFiYmZmZTZjZDg0MzFlYWJjMzY2MTk4MGE2ZTI4%0AMDkiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh%0Ac2h7AAY6CkB1c2VkewA%3D--17287179f12915c82191ef3b1b066e950b149fd5
+  Parameters: {"commit"=>"Create", "product"=>{"image_url"=>"lancia-037.jpg", "title"=>"Lancia 037", "price"=>"10000", "description"=>"Fresh Rebuild"}, "authenticity_token"=>"50bc61c040366f8308d9f6e7f5b8537c2421cb12", "action"=>"create", "controller"=>"products"}
+  [4;36;1mProduct Columns (0.004044)[0m   [0;1mSHOW FIELDS FROM `products`[0m
+  [4;35;1mSQL (0.000631)[0m   [0mBEGIN[0m
+  [4;36;1mProduct Load (0.021637)[0m   [0;1mSELECT * FROM `products` WHERE (products.title = 'Lancia 037') LIMIT 1[0m
+  [4;35;1mProduct Create (0.000876)[0m   [0mINSERT INTO `products` (`image_url`, `updated_at`, `price`, `title`, `description`, `created_at`) VALUES('lancia-037.jpg', '2008-12-05 18:35:03', '10000.0', 'Lancia 037', 'Fresh Rebuild', '2008-12-05 18:35:03')[0m
+  [4;36;1mSQL (0.007934)[0m   [0;1mCOMMIT[0m
+Redirected to http://homerj:3001/products/7
+Completed in 0.06888 (14 reqs/sec) | DB: 0.03512 (50%) | 302 Found [http://homerj/products]
+
+
+Processing ProductsController#show (for 127.0.0.1 at 2008-12-05 18:35:03) [GET]
+  Session ID: BAh7BzoMY3NyZl9pZCIlMGFiYmZmZTZjZDg0MzFlYWJjMzY2MTk4MGE2ZTI4%0AMDkiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh%0Ac2h7BjoLbm90aWNlIiZQcm9kdWN0IHdhcyBzdWNjZXNzZnVsbHkgY3JlYXRl%0AZC4GOgpAdXNlZHsGOwdU--a38172a41a4eac403a8e14c363294bb3232caf62
+  Parameters: {"action"=>"show", "id"=>"7", "controller"=>"products"}
+  [4;35;1mProduct Columns (0.009351)[0m   [0mSHOW FIELDS FROM `products`[0m
+  [4;36;1mProduct Load (0.002163)[0m   [0;1mSELECT * FROM `products` WHERE (`products`.`id` = 7) [0m
+Rendering template within layouts/products
+Rendering products/show
+Completed in 0.04138 (24 reqs/sec) | Rendering: 0.00613 (14%) | DB: 0.01151 (27%) | 200 OK [http://homerj/products/7]
+
+
+Processing ProductsController#index (for 127.0.0.1 at 2008-12-05 18:35:06) [GET]
+  Session ID: BAh7BzoMY3NyZl9pZCIlMGFiYmZmZTZjZDg0MzFlYWJjMzY2MTk4MGE2ZTI4%0AMDkiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh%0Ac2h7AAY6CkB1c2VkewA%3D--17287179f12915c82191ef3b1b066e950b149fd5
+  Parameters: {"action"=>"index", "controller"=>"products"}
+  [4;35;1mProduct Load (0.004455)[0m   [0mSELECT * FROM `products` [0m
+Rendering template within layouts/products
+Rendering products/index
+  [4;36;1mProduct Columns (0.012602)[0m   [0;1mSHOW FIELDS FROM `products`[0m
+Completed in 0.07843 (12 reqs/sec) | Rendering: 0.02117 (26%) | DB: 0.01706 (21%) | 200 OK [http://homerj/products]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2008-12-05 18:35:07) [GET]
+  Session ID: BAh7BzoMY3NyZl9pZCIlMGFiYmZmZTZjZDg0MzFlYWJjMzY2MTk4MGE2ZTI4%0AMDkiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh%0Ac2h7AAY6CkB1c2VkewA%3D--17287179f12915c82191ef3b1b066e950b149fd5
+  Parameters: {}
+
+
+ActionController::RoutingError (No route matches "/images/lancia-037.jpg" with {:method=>:get}):
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/routing.rb:1441:in `recognize_path'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/routing.rb:1424:in `recognize'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/dispatcher.rb:170:in `handle_request'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/dispatcher.rb:115:in `dispatch'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/dispatcher.rb:126:in `dispatch_cgi'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/dispatcher.rb:9:in `dispatch'
+    /usr/lib/ruby/gems/1.8/gems/rails-2.0.2/lib/webrick_server.rb:112:in `handle_dispatch'
+    /usr/lib/ruby/gems/1.8/gems/rails-2.0.2/lib/webrick_server.rb:78:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+    /usr/lib/ruby/gems/1.8/gems/rails-2.0.2/lib/webrick_server.rb:62:in `dispatch'
+    /usr/lib/ruby/gems/1.8/gems/rails-2.0.2/lib/commands/servers/webrick.rb:66
+    /usr/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:27:in `gem_original_require'
+    /usr/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:27:in `require'
+    /usr/lib/ruby/gems/1.8/gems/activesupport-2.0.2/lib/active_support/dependencies.rb:496:in `require'
+    /usr/lib/ruby/gems/1.8/gems/activesupport-2.0.2/lib/active_support/dependencies.rb:342:in `new_constants_in'
+    /usr/lib/ruby/gems/1.8/gems/activesupport-2.0.2/lib/active_support/dependencies.rb:496:in `require'
+    /usr/lib/ruby/gems/1.8/gems/rails-2.0.2/lib/commands/server.rb:39
+    /usr/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:27:in `gem_original_require'
+    /usr/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:27:in `require'
+    script/server:3
+
+Rendering /usr/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/templates/rescues/layout.erb (not_found)
+
+
+Processing ProductsController#index (for 127.0.0.1 at 2008-12-05 18:40:48) [GET]
+  Session ID: BAh7BzoMY3NyZl9pZCIlMGFiYmZmZTZjZDg0MzFlYWJjMzY2MTk4MGE2ZTI4%0AMDkiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh%0Ac2h7AAY6CkB1c2VkewA%3D--17287179f12915c82191ef3b1b066e950b149fd5
+  Parameters: {"action"=>"index", "controller"=>"products"}
+  [4;35;1mProduct Load (0.002560)[0m   [0mSELECT * FROM `products` [0m
+Rendering template within layouts/products
+Rendering products/index
+  [4;36;1mProduct Columns (0.006628)[0m   [0;1mSHOW FIELDS FROM `products`[0m
+Completed in 0.05980 (16 reqs/sec) | Rendering: 0.01535 (25%) | DB: 0.00919 (15%) | 200 OK [http://homerj/products]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2008-12-05 18:40:49) [GET]
+  Session ID: BAh7BzoMY3NyZl9pZCIlMGFiYmZmZTZjZDg0MzFlYWJjMzY2MTk4MGE2ZTI4%0AMDkiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh%0Ac2h7AAY6CkB1c2VkewA%3D--17287179f12915c82191ef3b1b066e950b149fd5
+  Parameters: {}
+
+
+ActionController::RoutingError (No route matches "/images/lancia-037.jpg" with {:method=>:get}):
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/routing.rb:1441:in `recognize_path'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/routing.rb:1424:in `recognize'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/dispatcher.rb:170:in `handle_request'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/dispatcher.rb:115:in `dispatch'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/dispatcher.rb:126:in `dispatch_cgi'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/dispatcher.rb:9:in `dispatch'
+    /usr/lib/ruby/gems/1.8/gems/rails-2.0.2/lib/webrick_server.rb:112:in `handle_dispatch'
+    /usr/lib/ruby/gems/1.8/gems/rails-2.0.2/lib/webrick_server.rb:78:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+    /usr/lib/ruby/gems/1.8/gems/rails-2.0.2/lib/webrick_server.rb:62:in `dispatch'
+    /usr/lib/ruby/gems/1.8/gems/rails-2.0.2/lib/commands/servers/webrick.rb:66
+    /usr/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:27:in `gem_original_require'
+    /usr/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:27:in `require'
+    /usr/lib/ruby/gems/1.8/gems/activesupport-2.0.2/lib/active_support/dependencies.rb:496:in `require'
+    /usr/lib/ruby/gems/1.8/gems/activesupport-2.0.2/lib/active_support/dependencies.rb:342:in `new_constants_in'
+    /usr/lib/ruby/gems/1.8/gems/activesupport-2.0.2/lib/active_support/dependencies.rb:496:in `require'
+    /usr/lib/ruby/gems/1.8/gems/rails-2.0.2/lib/commands/server.rb:39
+    /usr/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:27:in `gem_original_require'
+    /usr/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:27:in `require'
+    script/server:3
+
+Rendering /usr/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/templates/rescues/layout.erb (not_found)
+
+
+Processing ProductsController#index (for 127.0.0.1 at 2008-12-05 18:41:29) [GET]
+  Session ID: BAh7BzoMY3NyZl9pZCIlMGFiYmZmZTZjZDg0MzFlYWJjMzY2MTk4MGE2ZTI4%0AMDkiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh%0Ac2h7AAY6CkB1c2VkewA%3D--17287179f12915c82191ef3b1b066e950b149fd5
+  Parameters: {"action"=>"index", "controller"=>"products"}
+  [4;35;1mProduct Load (0.003859)[0m   [0mSELECT * FROM `products` [0m
+Rendering template within layouts/products
+Rendering products/index
+  [4;36;1mProduct Columns (0.011361)[0m   [0;1mSHOW FIELDS FROM `products`[0m
+
+
+ActionView::TemplateError (can't convert BigDecimal into String) on line #21 of products/index.html.erb:
+18: 
+19:     <td class='price'>
+20:       <dl>
+21:         <dt><%=h '$' + product.price %></dt>
+22:       </dl>
+23:     </td>
+24: 
+
+    app/views/products/index.html.erb:21:in `+'
+    app/views/products/index.html.erb:21:in `_run_erb_47app47views47products47index46html46erb'
+    app/views/products/index.html.erb:6:in `each'
+    app/views/products/index.html.erb:6:in `_run_erb_47app47views47products47index46html46erb'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_view/base.rb:637:in `send'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_view/base.rb:637:in `compile_and_render_template'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_view/base.rb:365:in `render_template'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_view/base.rb:316:in `render_file'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/base.rb:1100:in `render_for_file'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/base.rb:858:in `render_with_no_layout'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/base.rb:872:in `render_with_no_layout'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/layout.rb:262:in `render_without_benchmark'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/benchmarking.rb:51:in `render'
+    /usr/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/benchmarking.rb:51:in `render'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/mime_responds.rb:131:in `send'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/mime_responds.rb:131:in `custom'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/mime_responds.rb:156:in `call'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/mime_responds.rb:156:in `respond'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/mime_responds.rb:150:in `each'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/mime_responds.rb:150:in `respond'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/mime_responds.rb:107:in `respond_to'
+    app/controllers/products_controller.rb:7:in `index'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/base.rb:1158:in `send'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/base.rb:1158:in `perform_action_without_filters'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/filters.rb:697:in `call_filters'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/filters.rb:689:in `perform_action_without_benchmark'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    /usr/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/rescue.rb:199:in `perform_action_without_caching'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/caching.rb:678:in `perform_action'
+    /usr/lib/ruby/gems/1.8/gems/activerecord-2.0.2/lib/active_record/connection_adapters/abstract/query_cache.rb:33:in `cache'
+    /usr/lib/ruby/gems/1.8/gems/activerecord-2.0.2/lib/active_record/query_cache.rb:8:in `cache'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/caching.rb:677:in `perform_action'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/base.rb:524:in `send'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/base.rb:524:in `process_without_filters'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/filters.rb:685:in `process_without_session_management_support'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/session_management.rb:123:in `process'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/base.rb:388:in `process'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/dispatcher.rb:171:in `handle_request'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/dispatcher.rb:115:in `dispatch'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/dispatcher.rb:126:in `dispatch_cgi'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/dispatcher.rb:9:in `dispatch'
+    /usr/lib/ruby/gems/1.8/gems/rails-2.0.2/lib/webrick_server.rb:112:in `handle_dispatch'
+    /usr/lib/ruby/gems/1.8/gems/rails-2.0.2/lib/webrick_server.rb:78:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+    /usr/lib/ruby/gems/1.8/gems/rails-2.0.2/lib/webrick_server.rb:62:in `dispatch'
+    /usr/lib/ruby/gems/1.8/gems/rails-2.0.2/lib/commands/servers/webrick.rb:66
+    /usr/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:27:in `gem_original_require'
+    /usr/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:27:in `require'
+    /usr/lib/ruby/gems/1.8/gems/activesupport-2.0.2/lib/active_support/dependencies.rb:496:in `require'
+    /usr/lib/ruby/gems/1.8/gems/activesupport-2.0.2/lib/active_support/dependencies.rb:342:in `new_constants_in'
+    /usr/lib/ruby/gems/1.8/gems/activesupport-2.0.2/lib/active_support/dependencies.rb:496:in `require'
+    /usr/lib/ruby/gems/1.8/gems/rails-2.0.2/lib/commands/server.rb:39
+    /usr/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:27:in `gem_original_require'
+    /usr/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:27:in `require'
+    script/server:3
+
+Rendering /usr/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/templates/rescues/layout.erb (internal_server_error)
+
+
+Processing ProductsController#index (for 127.0.0.1 at 2008-12-05 18:41:41) [GET]
+  Session ID: BAh7BzoMY3NyZl9pZCIlMGFiYmZmZTZjZDg0MzFlYWJjMzY2MTk4MGE2ZTI4%0AMDkiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh%0Ac2h7AAY6CkB1c2VkewA%3D--17287179f12915c82191ef3b1b066e950b149fd5
+  Parameters: {"action"=>"index", "controller"=>"products"}
+  [4;35;1mProduct Load (0.004147)[0m   [0mSELECT * FROM `products` [0m
+Rendering template within layouts/products
+Rendering products/index
+  [4;36;1mProduct Columns (0.012681)[0m   [0;1mSHOW FIELDS FROM `products`[0m
+Completed in 0.06723 (14 reqs/sec) | Rendering: 0.02768 (41%) | DB: 0.02819 (41%) | 200 OK [http://homerj/products]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2008-12-05 18:41:41) [GET]
+  Session ID: BAh7BzoMY3NyZl9pZCIlMGFiYmZmZTZjZDg0MzFlYWJjMzY2MTk4MGE2ZTI4%0AMDkiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh%0Ac2h7AAY6CkB1c2VkewA%3D--17287179f12915c82191ef3b1b066e950b149fd5
+  Parameters: {}
+
+
+ActionController::RoutingError (No route matches "/images/lancia-037.jpg" with {:method=>:get}):
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/routing.rb:1441:in `recognize_path'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/routing.rb:1424:in `recognize'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/dispatcher.rb:170:in `handle_request'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/dispatcher.rb:115:in `dispatch'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/dispatcher.rb:126:in `dispatch_cgi'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/dispatcher.rb:9:in `dispatch'
+    /usr/lib/ruby/gems/1.8/gems/rails-2.0.2/lib/webrick_server.rb:112:in `handle_dispatch'
+    /usr/lib/ruby/gems/1.8/gems/rails-2.0.2/lib/webrick_server.rb:78:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+    /usr/lib/ruby/gems/1.8/gems/rails-2.0.2/lib/webrick_server.rb:62:in `dispatch'
+    /usr/lib/ruby/gems/1.8/gems/rails-2.0.2/lib/commands/servers/webrick.rb:66
+    /usr/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:27:in `gem_original_require'
+    /usr/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:27:in `require'
+    /usr/lib/ruby/gems/1.8/gems/activesupport-2.0.2/lib/active_support/dependencies.rb:496:in `require'
+    /usr/lib/ruby/gems/1.8/gems/activesupport-2.0.2/lib/active_support/dependencies.rb:342:in `new_constants_in'
+    /usr/lib/ruby/gems/1.8/gems/activesupport-2.0.2/lib/active_support/dependencies.rb:496:in `require'
+    /usr/lib/ruby/gems/1.8/gems/rails-2.0.2/lib/commands/server.rb:39
+    /usr/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:27:in `gem_original_require'
+    /usr/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:27:in `require'
+    script/server:3
+
+Rendering /usr/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/templates/rescues/layout.erb (not_found)
+
+
+Processing ProductsController#index (for 127.0.0.1 at 2008-12-05 19:10:54) [GET]
+  Session ID: BAh7BzoMY3NyZl9pZCIlMGFiYmZmZTZjZDg0MzFlYWJjMzY2MTk4MGE2ZTI4%0AMDkiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh%0Ac2h7AAY6CkB1c2VkewA%3D--17287179f12915c82191ef3b1b066e950b149fd5
+  Parameters: {"action"=>"index", "controller"=>"products"}
+  [4;35;1mProduct Load (0.002549)[0m   [0mSELECT * FROM `products` [0m
+Rendering template within layouts/products
+Rendering products/index
+  [4;36;1mProduct Columns (0.011247)[0m   [0;1mSHOW FIELDS FROM `products`[0m
+Completed in 0.07301 (13 reqs/sec) | Rendering: 0.01569 (21%) | DB: 0.01380 (18%) | 200 OK [http://homerj/products]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2008-12-05 19:10:54) [GET]
+  Session ID: BAh7BzoMY3NyZl9pZCIlMGFiYmZmZTZjZDg0MzFlYWJjMzY2MTk4MGE2ZTI4%0AMDkiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh%0Ac2h7AAY6CkB1c2VkewA%3D--17287179f12915c82191ef3b1b066e950b149fd5
+  Parameters: {}
+
+
+ActionController::RoutingError (No route matches "/images/lancia-037.jpg" with {:method=>:get}):
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/routing.rb:1441:in `recognize_path'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/routing.rb:1424:in `recognize'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/dispatcher.rb:170:in `handle_request'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/dispatcher.rb:115:in `dispatch'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/dispatcher.rb:126:in `dispatch_cgi'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/dispatcher.rb:9:in `dispatch'
+    /usr/lib/ruby/gems/1.8/gems/rails-2.0.2/lib/webrick_server.rb:112:in `handle_dispatch'
+    /usr/lib/ruby/gems/1.8/gems/rails-2.0.2/lib/webrick_server.rb:78:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+    /usr/lib/ruby/gems/1.8/gems/rails-2.0.2/lib/webrick_server.rb:62:in `dispatch'
+    /usr/lib/ruby/gems/1.8/gems/rails-2.0.2/lib/commands/servers/webrick.rb:66
+    /usr/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:27:in `gem_original_require'
+    /usr/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:27:in `require'
+    /usr/lib/ruby/gems/1.8/gems/activesupport-2.0.2/lib/active_support/dependencies.rb:496:in `require'
+    /usr/lib/ruby/gems/1.8/gems/activesupport-2.0.2/lib/active_support/dependencies.rb:342:in `new_constants_in'
+    /usr/lib/ruby/gems/1.8/gems/activesupport-2.0.2/lib/active_support/dependencies.rb:496:in `require'
+    /usr/lib/ruby/gems/1.8/gems/rails-2.0.2/lib/commands/server.rb:39
+    /usr/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:27:in `gem_original_require'
+    /usr/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:27:in `require'
+    script/server:3
+
+Rendering /usr/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/templates/rescues/layout.erb (not_found)
+
+
+Processing ProductsController#index (for 127.0.0.1 at 2008-12-05 19:11:23) [GET]
+  Session ID: BAh7BzoMY3NyZl9pZCIlMGFiYmZmZTZjZDg0MzFlYWJjMzY2MTk4MGE2ZTI4%0AMDkiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh%0Ac2h7AAY6CkB1c2VkewA%3D--17287179f12915c82191ef3b1b066e950b149fd5
+  Parameters: {"action"=>"index", "controller"=>"products"}
+  [4;35;1mProduct Load (0.007108)[0m   [0mSELECT * FROM `products` [0m
+Rendering template within layouts/products
+Rendering products/index
+  [4;36;1mProduct Columns (0.012509)[0m   [0;1mSHOW FIELDS FROM `products`[0m
+Completed in 0.05013 (19 reqs/sec) | Rendering: 0.01128 (22%) | DB: 0.01962 (39%) | 200 OK [http://homerj/products]
+
+
+Processing ProductsController#index (for 68.87.23.60 at 2008-12-09 02:15:15) [GET]
+  Session ID: 4a41c4c25ea63411cff0e5d01d348d60
+  Parameters: {"action"=>"index", "controller"=>"products"}
+WARNING: You're using the Ruby-based MySQL library that ships with Rails. This library is not suited for production. Please install the C-based MySQL library instead (gem install mysql).
+  [4;36;1mSQL (0.000362)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mProduct Load (0.002328)[0m   [0mSELECT * FROM `products` [0m
+Rendering template within layouts/products
+Rendering products/index
+  [4;36;1mProduct Columns (0.003938)[0m   [0;1mSHOW FIELDS FROM `products`[0m
+Completed in 0.06079 (16 reqs/sec) | Rendering: 0.03348 (55%) | DB: 0.00663 (10%) | 200 OK [http://homerj/products]
+
+
+Processing StoreController#index (for 68.87.23.60 at 2008-12-09 02:28:54) [GET]
+  Session ID: BAh7BzoMY3NyZl9pZCIlYTZhNGMxZWQ2NDYxZDg1N2I4YmZlMzRhYWQwN2Y2%0AM2IiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh%0Ac2h7AAY6CkB1c2VkewA%3D--b596a6ae93e6cb4b8ef1f47848efbd2a380aa9e2
+  Parameters: {"action"=>"index", "controller"=>"store"}
+Rendering store/index
+Completed in 0.01112 (89 reqs/sec) | Rendering: 0.00264 (23%) | DB: 0.00000 (0%) | 200 OK [http://homerj/store]
+
+
+Processing StoreController#index (for 68.87.23.60 at 2008-12-09 02:49:15) [GET]
+  Session ID: BAh7BzoMY3NyZl9pZCIlYTZhNGMxZWQ2NDYxZDg1N2I4YmZlMzRhYWQwN2Y2%0AM2IiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh%0Ac2h7AAY6CkB1c2VkewA%3D--b596a6ae93e6cb4b8ef1f47848efbd2a380aa9e2
+  Parameters: {"action"=>"index", "controller"=>"store"}
+  [4;35;1mProduct Load (0.023900)[0m   [0mSELECT * FROM `products` ORDER BY title[0m
+Rendering store/index
+Completed in 0.04401 (22 reqs/sec) | Rendering: 0.00161 (3%) | DB: 0.02390 (54%) | 200 OK [http://homerj/store]
+
+
+Processing StoreController#index (for 68.87.23.60 at 2008-12-09 02:49:19) [GET]
+  Session ID: BAh7BzoMY3NyZl9pZCIlYTZhNGMxZWQ2NDYxZDg1N2I4YmZlMzRhYWQwN2Y2%0AM2IiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh%0Ac2h7AAY6CkB1c2VkewA%3D--b596a6ae93e6cb4b8ef1f47848efbd2a380aa9e2
+  Parameters: {"action"=>"index", "controller"=>"store"}
+  [4;36;1mProduct Load (0.012569)[0m   [0;1mSELECT * FROM `products` ORDER BY title[0m
+Rendering store/index
+Completed in 0.03122 (32 reqs/sec) | Rendering: 0.00161 (5%) | DB: 0.01257 (40%) | 200 OK [http://homerj/store]

@@ -1,0 +1,30 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+                      "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+<head>
+  <title>Vintage Imports Online Store</title>
+<!-- START:stylesheet -->
+  <%= stylesheet_link_tag "depot", :media => "all" %><!-- <label id="code.slt"/> -->
+<!-- END:stylesheet -->
+</head>
+<body id="store">
+  <div id="banner">
+    <%= image_tag("rallysmiley.gif") %>
+    <%= @page_title || "Vintage Imports" %><!-- <label id="code.depot.e.title"/> -->
+  </div>
+  <div id="columns">
+    <div id="side">
+      <a href="http://localhost">Home</a><br />
+      <a href="http://localhost/cars">Cars</a><br />
+      <a href="http://localhost/parts">Parts</a><br />
+      <a href="http://localhost/faq">Questions</a><br />
+      <a href="http://localhost/news">News</a><br />
+      <a href="http://localhost/contact">Contact</a><br />
+      <%= Time.now %>
+    </div>
+    <div id="main">
+      <%= yield :layout %><!-- <label id="code.depot.e.include"/> -->
+    </div>
+  </div>
+</body>
+</html>
